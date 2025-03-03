@@ -1,0 +1,38 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  /* Espaça os itens para os lados opostos */
+  align-items: center;
+  /* Alinha os itens verticalmente */
+  padding: 10px 20px;
+  /* Espaçamento interno */
+}
+
+.logo {
+  margin-right: auto;
+  /* Move o link do nome para a esquerda */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 50px;
+  border-radius: 50%;
+  /* Faz a imagem ficar redonda */
+  object-fit: cover;
+  /* Garante que a imagem seja cortada corretamente se não for quadrada */
+}
+
+
+.link {
+  display: flex;
+  gap: 30px;
+  /* Espaçamento entre os links */
+}
+
+.link a {
+  font-size: 20px;
+  color: #333;
+}
+
+.link a:hover {
+  color: #68509b;
+  /* Efeito hover opcional */
+}
