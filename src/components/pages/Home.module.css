@@ -1,22 +1,35 @@
 .container{
-  display: flex;
-  align-items: end;
-  width: 100%;
-  margin: 0 auto;
-  font:
-  0.9em/1.2 Arial,
-  Helvetica,
-  sans-serif;
+  color:white;
+  flex-direction: column;
 }
 
-.container p{
-  margin-left: 20px;
-  justify-content: space-between;
+.section1{
+  display: flex;
+  align-items: flex-end;
+}
+
+.textContainer {
+  display: flex; /* Define layout flexível */
+  flex-direction: column; /* Coloca os <p> em uma coluna */
+  margin-left: 1%;
 }
 
 .foto1{
-    border-radius: 15%; /* Faz a imagem ficar redonda */
+    border-radius: 3%; /* Faz a imagem ficar redonda */
     width: 40%; /* Define 50% do tamanho original */
-    height: auto;
   }
+
+.p1{
+  display: flex;
+}
+
+.foto2{
+  border-radius: 100%;
+  width: 8%;
+}
+
+.section2{
+  display: flex;
+  flex-direction: column;
+}
 

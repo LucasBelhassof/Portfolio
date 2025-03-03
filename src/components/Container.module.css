@@ -1,10 +1,15 @@
 .container{
-    width: 1200px;
+    width: 80%;
     display: flex;
-    justify-content: space-between;
     margin: 0 auto;
     flex-wrap: wrap;
-    color: black;
+    background-color:black;
+    align-items: flex-end;
+}
+
+.container p{
+    margin-left: 2%;
+    align-items: center;
 }
 
 .min-height{
