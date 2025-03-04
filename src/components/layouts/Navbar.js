@@ -12,7 +12,7 @@ const Navbar = () => {
                     <h1>Lucas Belhassof</h1>
                 </Link>
                 <div className={styles.link}>
-                    <a><Link to="/about">About</Link></a>
+                    <a><Link to="/experience">EXPERIENCE</Link></a>
                     <a href="https://www.instagram.com/Lucas_Belhassof" target="_blank" rel="noopener noreferrer">
                         <FaInstagram />
                     </a>

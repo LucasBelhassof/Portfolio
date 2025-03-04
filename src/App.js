@@ -4,6 +4,7 @@ import './App.css';
 import Container from './components/Container';
 import Footer from './components/layouts/Footer';
 import Navbar from './components/layouts/Navbar';
+import Experience from './components/pages/Experience';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Container customClass="min-height">
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/experience" element={<Experience />} />
             </Routes>
           </Container>
           <Footer />

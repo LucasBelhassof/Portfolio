@@ -1,5 +1,4 @@
 .container{
-  color:white;
   flex-direction: column;
 }
 
@@ -28,8 +27,37 @@
   width: 8%;
 }
 
-.section2{
+.title{
   display: flex;
-  flex-direction: column;
+  padding: 10px;
 }
 
+.section2{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%; /* Certifique-se de usar toda a largura disponível */
+  margin: 0 auto; /* Centraliza o grid na página */
+}
+
+.box {
+  width: 90%;
+  display: flex; /* Usa flexbox para alinhar imagem e texto lado a lado */
+  align-items: end; /* Alinha verticalmente ao centro */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  gap: 10px; /* Espaço entre imagem e texto */
+}
+
+
+.box img {
+  max-width: 30%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.box p {
+  flex: 1; /* Faz o texto ocupar o espaço restante */
+  margin: 0; /* Remove margens padrão do <p> */
+}

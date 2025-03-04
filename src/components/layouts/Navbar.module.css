@@ -9,10 +9,9 @@
 .nome {
   font-size: 30px;
   text-decoration: none;
-  color: white;
+  color: #111827;
+  transition: all 1s ease;
 }
-
-
 
 .link {
   display: flex;
@@ -20,10 +19,12 @@
 }
 
 .link a {
-  font-size: 20px;
+  font-size: 100%;
   color: #333;
 }
 
 .link a:hover {
   color: #68509b;
+  transition: 0.5s;
+  transform: scale(1.05);
 }
