@@ -1,55 +1,54 @@
-.container{
-  flex-direction: column;
+.container {
+  display: flex;              
+  flex-direction: column;      
+  align-items: center;         
+  width: 100%;
 }
 
-.section1{
+.section1 {
   display: flex;
   align-items: flex-end;
+  width: 100%;                
 }
 
 .textContainer {
-  display: flex; /* Define layout flexível */
-  flex-direction: column; /* Coloca os <p> em uma coluna */
+  display: flex;               
+  flex-direction: column;
   margin-left: 1%;
 }
 
-.foto1{
-    border-radius: 3%; /* Faz a imagem ficar redonda */
-    width: 40%; /* Define 50% do tamanho original */
-  }
-
-.p1{
-  display: flex;
+.foto1 {
+  border-radius: 3%;
+  width: 40%;
 }
 
-.foto2{
+.p1 {
+  display: flex;
+  align-items: center;
+}
+
+.foto2 {
   border-radius: 100%;
   width: 8%;
 }
 
-.title{
-  display: flex;
-  padding: 10px;
-}
-
-.section2{
+.section2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  width: 100%; /* Certifique-se de usar toda a largura disponível */
-  margin: 0 auto; /* Centraliza o grid na página */
+  width: 100%;
+  padding: 20px 10px;
 }
 
 .box {
   width: 90%;
-  display: flex; /* Usa flexbox para alinhar imagem e texto lado a lado */
-  align-items: end; /* Alinha verticalmente ao centro */
+  display: flex;
+  align-items: flex-end;
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 10px;
-  gap: 10px; /* Espaço entre imagem e texto */
+  gap: 10px;
 }
-
 
 .box img {
   max-width: 30%;
@@ -58,6 +57,6 @@
 }
 
 .box p {
-  flex: 1; /* Faz o texto ocupar o espaço restante */
-  margin: 0; /* Remove margens padrão do <p> */
+  flex: 1;
+  margin: 0;
 }

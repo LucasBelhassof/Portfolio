@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import styles from './Experience.module.css';
 import Container from '../Container';
+import Work from '../content/Work';
+import Projects from '../content/Projects';
 
 const Experience = () => {
     const [isOn, setIsOn] = useState(false); // Estado inicial para o botão
@@ -10,22 +12,24 @@ const Experience = () => {
     };
 
     return (
-            <section className={styles.section}>
-                <div className={styles.container1}>
-                    <h1>Experience</h1>
-                    <button onClick={toggleSwitch} className={styles.button}>
-                        {isOn ? 'Desligar' : 'Ligar'}
-                    </button>
-                </div>
-            
-            <div>
+        <section className={styles.section}>
+            <h2>Experience</h2>
+            <div className={styles.contentbutton}>
+                <p>Work</p>
+                <button
+                    onClick={toggleSwitch}
+                    className={`${styles.button} ${isOn ? styles.on : ''}`}>
+                </button>
+                <p>Projects</p>
+            </div>
+            <div className={styles.content}>
                 {isOn ? (
-                    <p>O conteúdo está ligado! Aqui está algo interessante.</p>
+                    <Projects />
                 ) : (
-                    <p>O conteúdo está desligado. Clique no botão para ligar.</p>
+                    <Work />
                 )}
             </div>
-            </section>
+        </section>
     );
 };
 

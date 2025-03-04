@@ -18,11 +18,11 @@
 .social_list svg {
     font-size: 1.5em;
     cursor: pointer;
-    color: #fff; /* Define uma cor fixa inicial para os ícones */
+    color: #fff; 
 }
 
 .social_list li:hover svg {
-    color: #68509b; /* Muda a cor dos ícones ao passar o mouse */
+    color: #68509b;
 }
 
 

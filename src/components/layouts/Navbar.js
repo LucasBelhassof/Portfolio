@@ -9,7 +9,7 @@ const Navbar = () => {
         <Container>
             <nav className={styles.navbar}>
                 <Link to="/" className={styles.nome}>
-                    <h1>Lucas Belhassof</h1>
+                    <h1>Lucas Belhassof Leão</h1>
                 </Link>
                 <div className={styles.link}>
                     <a><Link to="/experience">EXPERIENCE</Link></a>
