@@ -1,7 +1,7 @@
 import styles from './Home.module.css';
 import foto1 from '../../img/Foto1.jpg';
 import foto2 from '../../img/unicesumar_logo.png';
-import flutter from '../../img/flutter.png';
+import flutter from '../../img/projetoRT.png';
 import react from '../../logo.svg';
 
 const Home = () => {
@@ -21,19 +21,17 @@ const Home = () => {
             <section className={styles.section2}>
                 <div className={styles.box}>
                     <img src={flutter} alt="flutter" />
-                    <p>Projeto em Flutter</p>
+                    <p>RealTrends(Clone)</p>
+                    <div>
+                        <ul>
+                            <li>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div className={styles.box}>
                     <img src={react} alt="react" />
-                    <p>Projeto em ReactJS</p>
-                </div>
-                <div className={styles.box}>
-                    <img src={react} alt="react" />
-                    <p>Projeto em ReactJS</p>
-                </div>
-                <div className={styles.box}>
-                    <img src={react} alt="react" />
-                    <p>Projeto em ReactJS</p>
+                    <p>Cost</p>
                 </div>
             </section>
         </div>
