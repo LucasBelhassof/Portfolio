@@ -10,8 +10,6 @@ import Experience from './components/pages/Experience';
 function App() {
   return (
     <Router>
-      <div className="App">
-        <header className="App-header">
           <Navbar />
           <Container customClass="min-height">
             <Routes>
@@ -20,8 +18,6 @@ function App() {
             </Routes>
           </Container>
           <Footer />
-        </header>
-      </div>
     </Router>
   );
 }

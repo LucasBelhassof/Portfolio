@@ -15,18 +15,18 @@ const Experience = () => {
         <section className={styles.section}>
             <h2>Experience</h2>
             <div className={styles.contentbutton}>
-                <p>Work</p>
+                <p>Projects</p>
                 <button
                     onClick={toggleSwitch}
                     className={`${styles.button} ${isOn ? styles.on : ''}`}>
                 </button>
-                <p>Projects</p>
+                <p>Work</p>
             </div>
             <div className={styles.content}>
                 {isOn ? (
-                    <Projects />
-                ) : (
                     <Work />
+                ) : (
+                    <Projects />
                 )}
             </div>
         </section>

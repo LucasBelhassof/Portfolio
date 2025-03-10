@@ -3,25 +3,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em;
+  margin-top: 1em;
+  margin-bottom: 2em;
 }
 
-.nome {
-  font-size: 30px;
-  text-decoration: none;
-  color: #111827;
-  transition: all 1s ease;
-}
-
-.link {
-  display: flex;
-  gap: 30px;
-}
-
-.link a {
-  font-size: 100%;
-  color: #333;
-}
 
 .link a:hover {
   color: #68509b;

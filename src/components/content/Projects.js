@@ -15,8 +15,9 @@ const Projects = () => {
                         style={{ fontSize: "18px" }}>//Code</a>
                 </h3>
                 <div className="d-flex flex-wrap gap-2">
-                    <div className="border border-gray-300 rounded-pill px-2 small" style={{ fontSize: "12px" }}>JavaScript</div>
-                    <div className="border border-gray-300 rounded-pill px-2 small" style={{ fontSize: "12px" }}>ReactJS</div>
+                    <div className="mt-1 border border-gray-300 rounded-pill px-2 small" style={{ fontSize: "12px" }}>ReactJS</div>
+                    <div className="mt-1 border border-gray-300 rounded-pill px-2 small" style={{ fontSize: "12px" }}>Bootstrap</div>
+                    <div className="mt-1 border border-gray-300 rounded-pill px-2 small" style={{ fontSize: "12px" }}>JavaScript</div>
                 </div>
                 <h5 className="mt-1 mb-2 text-secondary" style={{ fontSize: "16px" }}>
                     1 March 2025
@@ -45,8 +46,8 @@ const Projects = () => {
                         style={{ fontSize: "18px" }}>//Code</a>
                 </h3>
                 <div className="d-flex flex-wrap gap-2">
-                    <div className="border border-gray-300 rounded-pill px-2 small" style={{ fontSize: "12px" }}>Dart</div>
-                    <div className="border border-gray-300 rounded-pill px-2 small" style={{ fontSize: "12px" }}>Flutter</div>
+                    <div className="mt-1 border border-gray-300 rounded-pill px-2 small" style={{ fontSize: "12px" }}>Dart</div>
+                    <div className="mt-1 border border-gray-300 rounded-pill px-2 small" style={{ fontSize: "12px" }}>Flutter</div>
                 </div>
                 <h4 className="mt-1 mb-2 text-secondary" style={{ fontSize: "16px" }}>
                     25 September 2023
@@ -62,13 +63,13 @@ const Projects = () => {
                 }}
             >
                 <li className="mb-2">
-                    Aplicativo muito famoso entre qm trabalha com a plataforma MercadoLivre.
+                    Aplicativo muito famoso entre quem trabalha com a plataforma MercadoLivre.
                 </li>
                 <li className="mb-2">
-                    Focado em gerenciar multiplas contas do MercadoLivre, possibilida vizualizar perguntas feitas em anúncios e todas as mensagens nos pós-venda.
+                    Focado em gerenciar multiplas contas do MercadoLivre, possibilitando vizualizar e responder perguntas em anúncios e todas as mensagens nos pós-venda.
                 </li>
                 <li className="mb-2">
-                    O projeto tem como objetivo replicar as principais funcionalidades e o design do site original.
+                    O projeto tem como objetivo replicar as principais funcionalidades e o design do site.
                 </li>
             </ul>
         </div>

@@ -1,30 +1,39 @@
-import { Link } from 'react-router-dom'
-import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom'
 import styles from './Navbar.module.css'
-import logo from '../../img/Logo.jpg'
 import Container from '../Container'
+import Linkicon from './Linksicon';
 
 const Navbar = () => {
+    const [isExp, setExp] = useState(false);
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.pathname === '/experience')
+            setExp(true)
+        else
+            setExp(false)
+    }, [location])
+
+    const toggleSwitch = () => {
+        setExp(!isExp); // Alterna entre ligado (true) e desligado (false)
+    };
+
     return (
         <Container>
             <nav className={styles.navbar}>
-                <Link to="/" className={styles.nome}>
+                <Link to="/" className="text-decoration-none text-dark">
                     <h1>Lucas Belhassof Leão</h1>
                 </Link>
-                <div className={styles.link}>
-                    <a><Link to="/experience">EXPERIENCE</Link></a>
-                    <a href="https://www.instagram.com/Lucas_Belhassof" target="_blank" rel="noopener noreferrer">
-                        <FaInstagram />
-                    </a>
-
-                    <a href="https://github.com/LucasBelhassof?tab=repositories" target="_blank" rel="noopener noreferrer">
-                        <FaGithub />
-                    </a>
-
-                    <a href="https://www.linkedin.com/in/lucas-belhassof-leao" target="_blank" rel="noopener noreferrer">
-                        <FaLinkedin />
-                    </a>
-
+                <div>
+                    {isExp ? (
+                        <Linkicon />
+                    ) : (
+                        <a><Link onClick={toggleSwitch} to="/experience" className="m-1"
+                        style={{
+                            color: "black",
+                        }}>EXPERIENCE</Link></a>
+                    )}
                 </div>
             </nav>
         </Container>
