@@ -1,4 +1,4 @@
-.footer{
+.footer {
     background-color: #222;
     color: #fff;
     padding: 3em;
@@ -6,33 +6,25 @@
     margin-bottom: 0 auto;
 }
 
-.social_list{
-    display: flex;
-    justify-content: center;
-    list-style: none;
-}
-
-.social_list li{
-    margin: 0 1em;
-}
-
-.social_list svg {
-    font-size: 1.5em;
+.button {
+    background-color: rgb(84, 84, 84);
+    padding: 0.5em 0.5em;
     cursor: pointer;
-    color: #fff; 
 }
 
-.social_list li:hover svg {
-    color: #68509b;
+.button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.button a{
+    color:white
 }
 
-
-.copy_right{
-    margin-top: 2em;
-    color: rgb(84, 83, 83);
+.copy_right {
+    margin-top: 1em;
+    color: rgb(84, 84, 84);
 }
 
-.copy_right span{
+.copy_right span {
     font-weight: bold;
     color: #68509b;
 }

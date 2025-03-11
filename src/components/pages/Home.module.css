@@ -1,7 +1,6 @@
 .section1 {
   display: flex;
-  align-items: flex-end;
-  width: 100%;                
+  align-items: flex-end;             
 }
 
 .textContainer {
@@ -25,9 +24,17 @@
   grid-template-columns: repeat(2, 1fr);
 }
 
-.box {
-    width: 90%;
-    height: 100%;
-    gap: 10px;
-    text-decoration: none;
+@media (max-width: 768px) {
+  .section1 {
+    flex-wrap: wrap;
+  }
+  .foto1{
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .section2 {
+    grid-template-columns: 1fr; 
+  }
 }

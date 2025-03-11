@@ -1,26 +1,13 @@
-import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { CiMail } from "react-icons/ci";
 import styles from './Footer.module.css';
 
 function Footer() {
     return (
         <footer className={styles.footer}>
-            <ul className={styles.social_list}>
-                <li>
-                    <a href="https://www.instagram.com/Lucas_Belhassof" target="_blank" rel="noopener noreferrer">
-                        <FaInstagram />
-                    </a>
-                </li>
-                <li>
-                    <a href="https://github.com/LucasBelhassof?tab=repositories" target="_blank" rel="noopener noreferrer">
-                        <FaGithub />
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/lucas-belhassof-leao" target="_blank" rel="noopener noreferrer">
-                        <FaLinkedin />
-                    </a>
-                </li>
-            </ul>
+            <button className={`rounded ${styles.button}`}>
+                <a className="text-decoration-none" href="mailto:lucassbleao@yahoo.com.br" target="_blank" rel="noopener noreferrer">Email me <CiMail />
+                </a>
+            </button>
             <p className={styles.copy_right}>
                 <span>LBL</span> &copy; 2025
             </p>

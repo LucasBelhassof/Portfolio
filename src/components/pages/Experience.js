@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import styles from './Experience.module.css';
-import Container from '../Container';
 import Work from '../content/Work';
 import Projects from '../content/Projects';
 
@@ -13,7 +12,6 @@ const Experience = () => {
 
     return (
         <section className={styles.section}>
-            <h2>Experience</h2>
             <div className={styles.contentbutton}>
                 <p>Projects</p>
                 <button

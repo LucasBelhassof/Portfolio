@@ -1,12 +1,8 @@
-import React from "react";
-
 const Work = () => {
   return (
     <div
       className="container my-4 p-4 bg-light rounded shadow"
-      style={{ maxWidth: "800px" }}
-    >
-      {/* Primeiro item */}
+      style={{ maxWidth: "800px",}}>
       <div className="mb-3 pb-2 border-bottom">
         <h3 className="m-0 text-dark" style={{ fontSize: "24px" }}>
           Vipnote
@@ -25,19 +21,15 @@ const Work = () => {
         }}
       >
         <li className="mb-2">
-          Gerente Administrativo / Gerente de página da loja on-line.
+          Administrative Manager / Page Manager of the online store.
         </li>
         <li className="mb-2">
-          Solução de problemas em pré e pós-venda, gerenciar anúncios e solução
-          de problemas com as plataformas.
+          Troubleshooting in pre and after sales, managing ads and problem solving with platforms.
         </li>
         <li className="mb-2">
-          Acompanhamento de resultados e analista de dados em campanhas de
-          marketing das páginas
+          Results monitoring and data analyst in marketing campaigns.
         </li>
       </ul>
-
-      {/* Segundo item */}
       <div className="mb-3 pb-2 border-bottom">
         <h3 className="m-0 text-dark" style={{ fontSize: "24px" }}>
           Crys Leão Bolos e Doces
@@ -55,10 +47,9 @@ const Work = () => {
           margin: "0 0 20px",
         }}
       >
-        <li className="mb-2">Gerente Administrativo.</li>
+        <li className="mb-2">Administrative Manager.</li>
         <li className="mb-2">
-          Gerenciar, planejar, organizar e controlar as atividades
-          administrativas.
+          Manage, organize and control administrative activities.
         </li>
       </ul>
     </div>

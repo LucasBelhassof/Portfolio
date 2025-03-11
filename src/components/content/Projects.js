@@ -6,13 +6,14 @@ const Projects = () => {
         >
             <div className="mb-3 pb-2 border-bottom">
                 <h3 className="m-0 text-dark" style={{ fontSize: "24px" }}>
-                    Cost <span style={{ fontSize: "18px" }}>Gerenciador de Projetos</span>
+                    Cost <span style={{ fontSize: "18px" }}>Project Manager</span>
                     <a
                         className="text-reset text-decoration-none"
                         href="https://github.com/LucasBelhassof/Cost"
                         target="_blank"
                         rel="noopener noreferrer"
-                        style={{ fontSize: "18px" }}>//Code</a>
+                        style={{ fontSize: "18px" }}>//Code
+                    </a>
                 </h3>
                 <div className="d-flex flex-wrap gap-2">
                     <div className="mt-1 border border-gray-300 rounded-pill px-2 small" style={{ fontSize: "12px" }}>ReactJS</div>
@@ -32,8 +33,8 @@ const Projects = () => {
                     margin: "0 0 20px",
                 }}
             >
-                <li className="mb-2">Site focado em gerenciar custo de projetos.</li>
-                <li className="mb-2">Com backend implementado.</li>
+                <li className="mb-2">Site focused on managing project cost.</li>
+                <li className="mb-2">With backend implemented.</li>
             </ul>
             <div className="mb-3 pb-2 border-bottom">
                 <h3 className="m-0 text-dark" style={{ fontSize: "24px" }}>
@@ -63,13 +64,13 @@ const Projects = () => {
                 }}
             >
                 <li className="mb-2">
-                    Aplicativo muito famoso entre quem trabalha com a plataforma MercadoLivre.
+                    Very famous application among those who work with the MercadoLivre platform.
                 </li>
                 <li className="mb-2">
-                    Focado em gerenciar multiplas contas do MercadoLivre, possibilitando vizualizar e responder perguntas em anúncios e todas as mensagens nos pós-venda.
+                    Focused on managing multiple market accounts, enabling vizuolizing and answering questions in ads and all after-sales messages.
                 </li>
                 <li className="mb-2">
-                    O projeto tem como objetivo replicar as principais funcionalidades e o design do site.
+                    The project aims to replicate the main features and design of the site.
                 </li>
             </ul>
         </div>

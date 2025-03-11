@@ -9,7 +9,7 @@ import Linkicon from '../layouts/Linksicon';
 const Home = () => {
     return (
         <div>
-            <div className={styles.container}>
+            <div>
                 <section className={styles.section1}>
                     <img className={styles.foto1} src={foto1} alt="Foto" />
                     <div className="d-grid m-2">
@@ -24,9 +24,9 @@ const Home = () => {
                 </section>
             </div>
             <div>
-                <section className={`d-grid gap-3 p-3 mt-2 mr-0 ${styles.section2}`}>
-                    <div className={`border rounded p-3`}>
-                        <Link className={`d-flex align-items-end ${styles.box}`} to="/experience">
+                <section className={`d-grid gap-3 ${styles.section2}`}>
+                    <div className={`container my-4 p-4 bg-light rounded shadow`}>
+                        <Link className={`d-flex align-items-end text-decoration-none`} to="/experience">
                             <img src={flutter} alt="flutter" className="img-fluid rounded"
                                 style={{
                                     maxWidth: "30%",
@@ -48,8 +48,8 @@ const Home = () => {
                             </div>
                         </Link>
                     </div>
-                    <div className={`border rounded p-3`}>
-                        <Link className={`d-flex align-items-end text-decoration-none ${styles.box}`} to="/experience">
+                    <div className={`container my-4 p-4 bg-light rounded shadow`}>
+                        <Link className={`d-flex align-items-end text-decoration-none`} to="/experience">
                             <img src={costHome} alt="costHome" className="img-fluid rounded" style={{ maxWidth: "50%" }} />
                             <div className="d-grid">
                                 <h3 className="flex-grow-1 m-1 text-truncate text-dark">Cost <span
