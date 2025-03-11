@@ -1,6 +1,6 @@
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 
 const Linkicon = () => {
     const [isExp, setExp] = useState(false);
@@ -12,10 +12,6 @@ const Linkicon = () => {
         else
             setExp(false)
     }, [location])
-
-    const toggleSwitch = () => {
-        setExp(!isExp); // Alterna entre ligado (true) e desligado (false)
-    };
     return (
         <div>
             {isExp ? (

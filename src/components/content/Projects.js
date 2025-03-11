@@ -1,9 +1,7 @@
-import styles from './Projects.module.css'
-
 const Projects = () => {
     return (
         <div
-            className={`container mx-4 my-4 p-4 bg-light rounded shadow ${styles.responsive_container}`}
+            className={`container mx-4 my-4 p-4 bg-light rounded shadow`}
             style={{ 
                 maxWidth: "800px",
             }}>
