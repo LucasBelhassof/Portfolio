@@ -1,9 +1,12 @@
+import styles from './Projects.module.css'
+
 const Projects = () => {
     return (
         <div
-            className="container my-4 p-4 bg-light rounded shadow"
-            style={{ maxWidth: "800px" }}
-        >
+            className={`container mx-4 my-4 p-4 bg-light rounded shadow ${styles.responsive_container}`}
+            style={{ 
+                maxWidth: "800px",
+            }}>
             <div className="mb-3 pb-2 border-bottom">
                 <h3 className="m-0 text-dark" style={{ fontSize: "24px" }}>
                     Cost <span style={{ fontSize: "18px" }}>Project Manager</span>
