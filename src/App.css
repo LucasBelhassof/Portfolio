@@ -1,0 +1,46 @@
+:root {
+  --bg: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+  --primary: #68509b;
+  --card-bg: #f8f9fa;
+  --button-bg: #545454;
+}
+
+[data-theme='dark'] {
+  --bg: #0b1220;
+  --text: #e6eef6;
+  --muted: #9aa6b2;
+  --primary: #9b7bd2;
+  --card-bg: #0f1720;
+  --button-bg: #2b2b2b;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+/* Make Bootstrap "bg-light" follow theme */
+.bg-light {
+  background-color: var(--card-bg) !important;
+  color: var(--text) !important;
+}
+
+.text-dark {
+  color: var(--text) !important;
+}
+
+.text-secondary {
+  color: var(--muted) !important;
+}
+
+/* Buttons that rely on footer/button colors */
+.rounded {
+  transition: box-shadow 160ms ease;
+}

@@ -19,7 +19,7 @@ const Linkicon = () => {
                     <li className="px-2">
                         <a href="https://www.instagram.com/Lucas_Belhassof" target="_blank" rel="noopener noreferrer"
                             style={{
-                                color: "black",
+                                color: "var(--text)",
                             }}>
                             <FaInstagram />
                         </a>
@@ -27,7 +27,7 @@ const Linkicon = () => {
                     <li className="px-2">
                         <a href="https://github.com/LucasBelhassof?tab=repositories" target="_blank" rel="noopener noreferrer"
                             style={{
-                                color: "black",
+                                color: "var(--text)",
                             }}>
                             <FaGithub />
                         </a>
@@ -35,18 +35,18 @@ const Linkicon = () => {
                     <li className="px-2">
                         <a href="https://www.linkedin.com/in/lucas-belhassof-leao" target="_blank" rel="noopener noreferrer"
                             style={{
-                                color: "black",
+                                color: "var(--text)",
                             }}>
                             <FaLinkedin />
                         </a>
                     </li>
                 </ul>
-            ) : (
+                    ) : (
                 <ul className="d-flex list-unstyled" style={{ fontSize: "30px" }}>
                     <li className="px-2">
                         <a href="https://www.instagram.com/Lucas_Belhassof" target="_blank" rel="noopener noreferrer"
                             style={{
-                                color: "black",
+                                color: "var(--text)",
                             }}>
                             <FaInstagram />
                         </a>
@@ -54,7 +54,7 @@ const Linkicon = () => {
                     <li className="px-2">
                         <a href="https://github.com/LucasBelhassof?tab=repositories" target="_blank" rel="noopener noreferrer"
                             style={{
-                                color: "black",
+                                color: "var(--text)",
                             }}>
                             <FaGithub />
                         </a>
@@ -62,7 +62,7 @@ const Linkicon = () => {
                     <li className="px-2">
                         <a href="https://www.linkedin.com/in/lucas-belhassof-leao" target="_blank" rel="noopener noreferrer"
                             style={{
-                                color: "black",
+                                color: "var(--text)",
                             }}>
                             <FaLinkedin />
                         </a>

@@ -16,7 +16,7 @@ const Work = () => {
         style={{
           listStyleType: "disc",
           paddingLeft: "20px",
-          color: "#555",
+          color: "var(--muted)",
           margin: "0 0 20px",
         }}
       >
@@ -43,7 +43,7 @@ const Work = () => {
         style={{
           listStyleType: "disc",
           paddingLeft: "20px",
-          color: "#555",
+          color: "var(--muted)",
           margin: "0 0 20px",
         }}
       >

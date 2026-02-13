@@ -13,7 +13,7 @@ h2 {
   left: 20px; 
   margin: 0; 
   font-size: 24px; 
-  color: #333; 
+  color: var(--text); 
 }
 
 .contentbutton {
@@ -27,7 +27,7 @@ h2 {
 p {
   margin: 0;
   font-size: 16px;
-  color: #333; 
+  color: var(--text); 
 }
 
 .button {
@@ -54,7 +54,7 @@ p {
 }
 
 .button.on {
-  background-color: #68509b; 
+  background-color: var(--primary); 
 }
 
 .button.on::before {

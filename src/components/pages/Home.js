@@ -80,7 +80,7 @@ const Home = () => {
                             className="mb-3"
                             style={{
                                 listStyleType: "disc",
-                                color: "#555",
+                                color: "var(--muted)",
                                 margin: "0 0 20px",
                             }}>
                             <li className="mb-2">Inglês Avançado <span className="border border-gray-300 rounded-pill px-2 small">Ibeu</span></li>

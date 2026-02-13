@@ -30,7 +30,7 @@ const Projects = () => {
                 style={{
                     listStyleType: "disc",
                     paddingLeft: "20px",
-                    color: "#555",
+                    color: "var(--muted)",
                     margin: "0 0 20px",
                 }}
             >
@@ -60,7 +60,7 @@ const Projects = () => {
                 style={{
                     listStyleType: "disc",
                     paddingLeft: "20px",
-                    color: "#555",
+                    color: "var(--muted)",
                     margin: "0 0 20px",
                 }}
             >

@@ -1,14 +1,14 @@
 .footer {
     flex-direction: column;
-    background-color: #222;
-    color: #fff;
+    background-color: var(--button-bg);
+    color: var(--text);
     padding: 3em;
     text-align: center;
     margin: 0em;
 }
 
 .button {
-    background-color: rgb(84, 84, 84);
+    background-color: var(--button-bg);
     padding: 0.5em 0.5em;
     cursor: pointer;
 }
@@ -17,15 +17,15 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .button a{
-    color:white
+    color:var(--text)
 }
 
 .copy_right {
     margin-top: 1em;
-    color: rgb(84, 84, 84);
+    color: var(--muted);
 }
 
 .copy_right span {
     font-weight: bold;
-    color: #68509b;
+    color: var(--primary);
 }

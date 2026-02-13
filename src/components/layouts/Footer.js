@@ -1,13 +1,13 @@
 import { CiMail } from "react-icons/ci";
 import styles from './Footer.module.css';
+import Button from '../ui/Button';
 
 function Footer() {
     return (
         <footer className={styles.footer}>
-            <button className={`rounded ${styles.button}`}>
-                <a className="text-decoration-none" href="mailto:lucasbelhassof@gmail.com" target="_blank" rel="noopener noreferrer">Email me <CiMail />
-                </a>
-            </button>
+            <Button href="mailto:lucasbelhassof@gmail.com" className={styles.button} rounded>
+                Email me <CiMail />
+            </Button>
             <p className={styles.copy_right}>
                 <span>LBL</span> &copy; 2025
             </p>
