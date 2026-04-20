@@ -1,10 +1,35 @@
 import { Link } from 'react-router-dom';
-import costHome from '../../img/costHome.png';
 import foto1 from '../../img/Foto1.jpg';
-import flutter from '../../img/projetoRT.png';
 import foto2 from '../../img/unicesumar_logo.png';
 import Linkicon from '../layouts/Linksicon';
 import styles from './Home.module.css';
+
+const featuredProjects = [
+  {
+    name: 'Finly',
+    label: 'My Saas project',
+    description:
+      'Full-stack finance platform with dashboard, AI insights, chat AI, API endpoints and Postgres persistence.',
+  },
+  {
+    name: 'NexaSystem Cliente',
+    label: 'Private project',
+    description:
+      'Client-facing business system built with Laravel, Vue 3, Inertia and a modern operational stack.',
+  },
+  {
+    name: 'NexaSystem',
+    label: 'Private project',
+    description:
+      'Administrative core platform designed to support structured operations in the NexaSystem ecosystem.',
+  },
+  {
+    name: 'Cost',
+    label: 'Project manager',
+    description:
+      'Project and budget management application focused on categories, services and CRUD flows.',
+  },
+];
 
 const Home = () => {
   return (
@@ -28,70 +53,24 @@ const Home = () => {
       </div>
       <div>
         <section className={`d-grid gap-3 ${styles.section2}`}>
-          <div className="container my-4 p-4 bg-light rounded shadow">
-            <Link
-              className="d-flex align-items-end text-decoration-none"
-              to="/experience"
+          {featuredProjects.map((project) => (
+            <div
+              key={project.name}
+              className={`container my-2 p-4 bg-light rounded shadow ${styles.projectCard}`}
             >
-              <img
-                src={flutter}
-                alt="flutter"
-                className="img-fluid rounded"
-                style={{
-                  maxWidth: '30%',
-                }}
-              />
-              <div className="d-grid">
-                <h3 className="flex-grow-1 m-1 text-truncate text-dark">
-                  RealTrends{' '}
-                  <span
-                    className="mr-2 border border-gray-300 rounded-pill px-2 small"
-                    style={{
-                      fontSize: '21px',
-                    }}
-                  >
-                    Clone
-                  </span>
-                </h3>
-                <ul className="mb-2 text-dark">
-                  The project aims to replicate the main features and design of
-                  the site. Features such as Question Page, your Interactive
-                  Navbar Message Tab, Configuration and +.
-                </ul>
-              </div>
-            </Link>
-          </div>
-          <div className="container my-4 p-4 bg-light rounded shadow">
-            <Link
-              className="d-flex align-items-end text-decoration-none"
-              to="/experience"
-            >
-              <img
-                src={costHome}
-                alt="costHome"
-                className="img-fluid rounded"
-                style={{ maxWidth: '50%' }}
-              />
-              <div className="d-grid">
-                <h3 className="flex-grow-1 m-1 text-truncate text-dark">
-                  Cost{' '}
-                  <span
-                    className="mr-2 border border-gray-300 rounded-pill px-2 small"
-                    style={{
-                      fontSize: '21px',
-                    }}
-                  >
-                    Project Manager
-                  </span>
-                </h3>
-                <ul className="mb-2 text-dark">
-                  The project aims to create a project manager, which we can
-                  create a project, say its budget and what its category and add
-                  services that do not exceed the budget destined.
-                </ul>
-              </div>
-            </Link>
-          </div>
+              <Link className={styles.projectLink} to="/experience">
+                <div className={styles.projectHeader}>
+                  <h3 className={`m-0 text-dark ${styles.projectTitle}`}>
+                    {project.name}
+                  </h3>
+                  <span className={styles.projectBadge}>{project.label}</span>
+                </div>
+                <p className={`mb-0 text-dark ${styles.projectDescription}`}>
+                  {project.description}
+                </p>
+              </Link>
+            </div>
+          ))}
         </section>
         <section>
           <div>
@@ -115,6 +94,12 @@ const Home = () => {
                 Ingles Avancado{' '}
                 <span className="border border-gray-300 rounded-pill px-2 small">
                   Ibeu
+                </span>
+              </li>
+              <li className="mb-2">
+                Google Cloud Plataform{' '}
+                <span className="border border-gray-300 rounded-pill px-2 small">
+                  Google
                 </span>
               </li>
               <li className="mb-2">
