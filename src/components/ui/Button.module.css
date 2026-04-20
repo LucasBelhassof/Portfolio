@@ -7,7 +7,7 @@
   --btn-padding-x-lg: 18px;
 }
 
-.button{
+.button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -19,24 +19,61 @@
   background: var(--primary);
   padding: var(--btn-padding-y-md) var(--btn-padding-x-md);
   border-radius: 6px;
-  transition: transform 120ms ease, box-shadow 120ms ease, background-color 120ms ease;
+  transition:
+    transform 120ms ease,
+    box-shadow 120ms ease,
+    background-color 120ms ease;
 }
 
-.button:hover{ transform: translateY(-1px); }
-.button:active{ transform: translateY(0); }
+.button:hover {
+  transform: translateY(-1px);
+}
+.button:active {
+  transform: translateY(0);
+}
 
 /* Variants */
-.primary{ background: var(--primary); color: var(--bg); }
-.secondary{ background: transparent; color: var(--text); border: 1px solid var(--muted); }
-.ghost{ background: transparent; color: var(--text); box-shadow: none; border: none; }
-.outline{ background: transparent; color: var(--primary); border: 1px solid var(--primary); }
+.primary {
+  background: var(--primary);
+  color: var(--bg);
+}
+.secondary {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--muted);
+}
+.ghost {
+  background: transparent;
+  color: var(--text);
+  box-shadow: none;
+  border: none;
+}
+.outline {
+  background: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
 
 /* Sizes */
-.sm{ padding: var(--btn-padding-y-sm) var(--btn-padding-x-sm); font-size: 0.85rem; }
-.md{ padding: var(--btn-padding-y-md) var(--btn-padding-x-md); font-size: 1rem; }
-.lg{ padding: var(--btn-padding-y-lg) var(--btn-padding-x-lg); font-size: 1.05rem; }
+.sm {
+  padding: var(--btn-padding-y-sm) var(--btn-padding-x-sm);
+  font-size: 0.85rem;
+}
+.md {
+  padding: var(--btn-padding-y-md) var(--btn-padding-x-md);
+  font-size: 1rem;
+}
+.lg {
+  padding: var(--btn-padding-y-lg) var(--btn-padding-x-lg);
+  font-size: 1.05rem;
+}
 
-.rounded{ border-radius: 999px; }
+.rounded {
+  border-radius: 999px;
+}
 
 /* Focus */
-.button:focus{ outline: none; box-shadow: 0 0 0 4px rgba(104,80,155,0.12); }
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(104, 80, 155, 0.12);
+}

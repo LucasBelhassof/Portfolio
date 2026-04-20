@@ -1,10 +1,10 @@
 .section1 {
   display: flex;
-  align-items: flex-end;             
+  align-items: flex-end;
 }
 
 .textContainer {
-  display: flex;               
+  display: flex;
   flex-direction: column;
   margin-left: 1em;
 }
@@ -28,13 +28,13 @@
   .section1 {
     flex-wrap: wrap;
   }
-  .foto1{
+  .foto1 {
     width: 80%;
   }
 }
 
 @media (max-width: 768px) {
   .section2 {
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
   }
 }

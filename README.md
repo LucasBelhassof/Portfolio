@@ -1,70 +1,110 @@
-# Getting Started with Create React App
+# Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Personal portfolio website built with React and deployed on Netlify. The project uses Create React App for bundling, React Router for client-side navigation, and Bootstrap plus CSS modules for styling.
+
+## Tech Stack
+
+- React 19
+- Create React App (`react-scripts` 5)
+- React Router DOM
+- Bootstrap 5
+- ESLint 9
+- Prettier
+- GitHub Actions
+- Netlify
+
+## Requirements
+
+- Node.js 20 or newer
+- npm 10 or newer
+
+## Installation
+
+```bash
+npm install
+```
+
+## Run Locally
+
+```bash
+npm run dev
+```
+
+The development server runs on `http://localhost:3000`.
 
 ## Available Scripts
 
-In the project directory, you can run:
+- `npm run dev`: starts the CRA development server
+- `npm start`: alias for the CRA development server
+- `npm run build`: creates the production build in `build/`
+- `npm run preview`: serves the production build locally
+- `npm run lint`: runs ESLint across the project
+- `npm run lint:fix`: fixes auto-fixable ESLint issues
+- `npm run format`: formats the codebase with Prettier
+- `npm run format:check`: checks formatting without changing files
+- `npm test`: runs the test suite once
 
-### `npm start`
+## Environment Variables
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+No environment variables are required for the current project state.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+If environment variables are added later, follow these rules:
 
-### `npm test`
+- use `.env.local` for local development secrets
+- never commit secrets
+- document each variable in this README
+- expose browser variables with the CRA `REACT_APP_` prefix
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Build
 
-### `npm run build`
+```bash
+npm run build
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The production output is generated in `build/`, which matches the Netlify publish directory configured in `netlify.toml`.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Deployment (Netlify)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This project stays compatible with the current Netlify deployment model.
 
-### `npm run eject`
+- Build command: `npm run build`
+- Publish directory: `build`
+- SPA routing: handled by both `netlify.toml` and `public/_redirects`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Netlify can continue deploying directly from the repository without platform changes.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## CI
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+GitHub Actions runs on pull requests and pushes to `main` and performs:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- `npm ci`
+- `npm run lint`
+- `npm test`
+- `npm run build`
 
-## Learn More
+## Folder Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```text
+public/
+  _redirects
+  index.html
+src/
+  components/
+    content/
+    layouts/
+    pages/
+    ui/
+  layouts/
+  routes/
+  img/
+  App.js
+  index.js
+.github/workflows/
+netlify.toml
+eslint.config.js
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Notes
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- The current stack remains CRA by design to preserve the existing production deployment behavior.
+- Infrastructure improvements in this pass focus on DX, consistency, CI, and deploy safety without changing the hosting platform.

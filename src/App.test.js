@@ -1,8 +1,11 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import Button from './components/ui/Button';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('renders a link button when href is provided', () => {
+  render(<Button href="mailto:lucasbelhassof@gmail.com">Email me</Button>);
+
+  expect(screen.getByRole('link', { name: /email me/i })).toHaveAttribute(
+    'href',
+    'mailto:lucasbelhassof@gmail.com',
+  );
 });

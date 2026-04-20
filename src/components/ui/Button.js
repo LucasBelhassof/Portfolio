@@ -15,7 +15,9 @@ const Button = ({
     styles[size],
     rounded ? styles.rounded : null,
     className || null,
-  ].filter(Boolean).join(' ');
+  ]
+    .filter(Boolean)
+    .join(' ');
 
   if (href) {
     return (

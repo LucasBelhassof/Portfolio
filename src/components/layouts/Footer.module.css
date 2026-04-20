@@ -1,31 +1,31 @@
 .footer {
-    flex-direction: column;
-    background-color: var(--button-bg);
-    color: var(--text);
-    padding: 3em;
-    text-align: center;
-    margin: 0em;
+  flex-direction: column;
+  background-color: var(--button-bg);
+  color: var(--text);
+  padding: 3em;
+  text-align: center;
+  margin: 0em;
 }
 
 .button {
-    background-color: var(--button-bg);
-    padding: 0.5em 0.5em;
-    cursor: pointer;
+  background-color: var(--button-bg);
+  padding: 0.5em 0.5em;
+  cursor: pointer;
 }
 
 .button:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-.button a{
-    color:var(--text)
+.button a {
+  color: var(--text);
 }
 
 .copy_right {
-    margin-top: 1em;
-    color: var(--muted);
+  margin-top: 1em;
+  color: var(--muted);
 }
 
 .copy_right span {
-    font-weight: bold;
-    color: var(--primary);
+  font-weight: bold;
+  color: var(--primary);
 }

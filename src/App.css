@@ -16,14 +16,18 @@
   --button-bg: #2b2b2b;
 }
 
-html, body, #root {
+html,
+body,
+#root {
   height: 100%;
 }
 
 body {
   background-color: var(--bg);
   color: var(--text);
-  transition: background-color 200ms ease, color 200ms ease;
+  transition:
+    background-color 200ms ease,
+    color 200ms ease;
 }
 
 /* Make Bootstrap "bg-light" follow theme */
