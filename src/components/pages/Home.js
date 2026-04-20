@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import foto1 from '../../img/Foto1.jpg';
+import foto1 from '../../img/Foto1.jpeg';
 import foto2 from '../../img/unicesumar_logo.png';
 import Linkicon from '../layouts/Linksicon';
 import styles from './Home.module.css';
