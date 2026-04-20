@@ -2,8 +2,9 @@ import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { useLocation } from 'react-router-dom';
 
 const Linkicon = () => {
-  const isExperienceRoute = useLocation().pathname === '/experience';
-  const iconSize = isExperienceRoute ? '20px' : '30px';
+  const pathname = useLocation().pathname;
+  const isCompactRoute = pathname === '/experience' || pathname === '/journey';
+  const iconSize = isCompactRoute ? '20px' : '30px';
 
   return (
     <div>

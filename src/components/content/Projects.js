@@ -1,74 +1,4 @@
-const projectList = [
-  {
-    name: 'Finly',
-    subtitle: 'Full-stack finance platform',
-    repository: 'https://github.com/LucasBelhassof/finly',
-    date: '2026',
-    stack: ['React', 'Vite', 'TypeScript', 'Express', 'PostgreSQL'],
-    highlights: [
-      'Financial platform with dashboard, insights, chat and data persistence.',
-      'Built with a dedicated backend, REST API endpoints and SQL migrations.',
-      'Structured to run frontend and backend locally with a real database flow.',
-    ],
-  },
-  {
-    name: 'NexaSystem Cliente',
-    subtitle: 'Client-facing business platform',
-    repository: 'https://github.com/LucasBelhassof/nexaSystem_Cliente',
-    date: '2026',
-    stack: [
-      'Laravel',
-      'Vue 3',
-      'Inertia',
-      'Vite',
-      'Tailwind CSS',
-      'TypeScript',
-    ],
-    highlights: [
-      'Client-oriented system built on Laravel and Vue 3 with a modern web stack.',
-      'Includes business features such as real-time communication and payment integrations.',
-      'Presented as a private case study because the repository is not public.',
-    ],
-    isPrivate: true,
-  },
-  {
-    name: 'NexaSystem',
-    subtitle: 'Administrative core platform',
-    repository: 'https://github.com/LucasBelhassof/nexaSystem',
-    date: '2026',
-    stack: ['Laravel', 'Vue 3', 'Inertia', 'Vite', 'Tailwind CSS'],
-    highlights: [
-      'Administrative system that complements the NexaSystem ecosystem.',
-      'Built with Laravel 12, Vue 3 and Inertia to support a structured operations flow.',
-      'Presented as a private case study because the repository is not public.',
-    ],
-    isPrivate: true,
-  },
-  {
-    name: 'Cost',
-    subtitle: 'Project Manager',
-    repository: 'https://github.com/LucasBelhassof/Cost',
-    date: '1 March 2025',
-    stack: ['React', 'CRA', 'React Router', 'JSON Server'],
-    highlights: [
-      'Project manager focused on budgets, categories and service control.',
-      'Includes CRUD flows to create projects and manage services within budget.',
-      'Uses a lightweight local backend strategy for development and data simulation.',
-    ],
-  },
-  {
-    name: 'RealTrends Clone',
-    subtitle: 'Flutter product interface recreation',
-    repository: 'https://github.com/LucasBelhassof/real-trends-clone',
-    date: '25 September 2023',
-    stack: ['Flutter', 'Dart'],
-    highlights: [
-      'Clone inspired by the Real Trends product and interface.',
-      'Focused on reproducing key flows and the overall visual structure of the platform.',
-      'Useful to demonstrate UI execution and product replication skills in Flutter.',
-    ],
-  },
-];
+import { projectData } from '../../data/projectData';
 
 const Projects = () => {
   return (
@@ -78,7 +8,7 @@ const Projects = () => {
         maxWidth: '800px',
       }}
     >
-      {projectList.map((project) => (
+      {projectData.map((project) => (
         <div key={project.name}>
           <div className="mb-3 pb-2 border-bottom">
             <h3 className="m-0 text-dark" style={{ fontSize: '24px' }}>

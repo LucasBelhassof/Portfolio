@@ -16,7 +16,11 @@ const Navbar = () => {
     }
   });
   const location = useLocation();
-  const isExperienceRoute = location.pathname === '/experience';
+  const isHomeRoute = location.pathname === '/';
+  const navItems = [
+    { to: '/experience', label: 'EXPERIENCE' },
+    { to: '/journey', label: 'MY JOURNEY' },
+  ];
 
   useEffect(() => {
     try {
@@ -38,17 +42,22 @@ const Navbar = () => {
           <h1>Lucas Belhassof Leao</h1>
         </Link>
         <div className={styles.controls}>
-          {isExperienceRoute ? (
-            <Linkicon />
-          ) : (
-            <Link
-              to="/experience"
-              className={`${styles.link} m-1`}
-              style={{ color: 'inherit' }}
-            >
-              EXPERIENCE
-            </Link>
-          )}
+          <div className={styles.navLinks}>
+            {navItems.map((item) => {
+              const isActive = location.pathname === item.to;
+
+              return (
+                <Link
+                  key={item.to}
+                  to={item.to}
+                  className={`${styles.link} ${isActive ? styles.activeLink : ''}`}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
+          </div>
+          {!isHomeRoute ? <Linkicon /> : null}
           <Button
             onClick={toggleTheme}
             aria-label="Toggle theme"

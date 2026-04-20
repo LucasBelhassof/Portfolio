@@ -1,35 +1,9 @@
 import { Link } from 'react-router-dom';
 import foto1 from '../../img/Foto1.jpeg';
 import foto2 from '../../img/unicesumar_logo.png';
+import { homeFeaturedProjects } from '../../data/projectData';
 import Linkicon from '../layouts/Linksicon';
 import styles from './Home.module.css';
-
-const featuredProjects = [
-  {
-    name: 'Finly',
-    label: 'My Saas project',
-    description:
-      'Full-stack finance platform with dashboard, AI insights, chat AI, API endpoints and Postgres persistence.',
-  },
-  {
-    name: 'NexaSystem Cliente',
-    label: 'Private project',
-    description:
-      'Client-facing business system built with Laravel, Vue 3, Inertia and a modern operational stack.',
-  },
-  {
-    name: 'NexaSystem',
-    label: 'Private project',
-    description:
-      'Administrative core platform designed to support structured operations in the NexaSystem ecosystem.',
-  },
-  {
-    name: 'Cost',
-    label: 'Project manager',
-    description:
-      'Project and budget management application focused on categories, services and CRUD flows.',
-  },
-];
 
 const Home = () => {
   return (
@@ -53,7 +27,7 @@ const Home = () => {
       </div>
       <div>
         <section className={`d-grid gap-3 ${styles.section2}`}>
-          {featuredProjects.map((project) => (
+          {homeFeaturedProjects.map((project) => (
             <div
               key={project.name}
               className={`container my-2 p-4 bg-light rounded shadow ${styles.projectCard}`}

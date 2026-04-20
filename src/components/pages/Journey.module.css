@@ -1,0 +1,306 @@
+.page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding-bottom: 3rem;
+}
+
+.hero {
+  display: grid;
+  gap: 1rem;
+  padding: 1.75rem;
+  border-radius: 30px;
+  border: 1px solid rgba(107, 114, 128, 0.16);
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(104, 80, 155, 0.2),
+      transparent 32%
+    ),
+    linear-gradient(180deg, rgba(104, 80, 155, 0.08), rgba(104, 80, 155, 0.02));
+}
+
+.eyebrow,
+.sectionLabel,
+.period {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.78rem;
+  color: var(--primary);
+}
+
+.heroTitle,
+.timelineIntro h3,
+.projectsHeader h3,
+.timelineContent h4,
+.projectTop h4 {
+  margin: 0;
+  color: var(--text);
+}
+
+.heroTitle {
+  font-size: clamp(2.1rem, 4vw, 3.6rem);
+  line-height: 1.05;
+}
+
+.heroSummary,
+.timelineIntro p,
+.subtitle,
+.body,
+.projectDescription,
+.projectTop p,
+.privateNote,
+.focusItem p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.focusList {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.focusItem {
+  display: grid;
+  grid-template-columns: 12px minmax(0, 1fr);
+  gap: 0.8rem;
+  padding: 1rem;
+  border-radius: 20px;
+  background: var(--card-bg);
+  border: 1px solid rgba(107, 114, 128, 0.12);
+}
+
+.focusBullet {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--primary);
+  margin-top: 0.45rem;
+}
+
+.timelineSection {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(220px, 0.8fr) 56px minmax(0, 1.2fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.timelineIntro {
+  position: sticky;
+  top: 7rem;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.timelineRail {
+  position: sticky;
+  top: 7rem;
+  height: calc(100vh - 8rem);
+  display: flex;
+  justify-content: center;
+}
+
+.timelineLine,
+.timelineProgress {
+  position: absolute;
+  top: 0;
+  width: 4px;
+  border-radius: 999px;
+}
+
+.timelineLine {
+  height: 100%;
+  background: rgba(107, 114, 128, 0.18);
+}
+
+.timelineProgress {
+  background: linear-gradient(180deg, var(--primary), rgba(104, 80, 155, 0.4));
+  transition: height 120ms linear;
+}
+
+.timelineItems {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.timelineCard {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+  opacity: 0.6;
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+.timelineCardActive {
+  opacity: 1;
+  transform: translateX(4px);
+}
+
+.timelineMarkerWrap {
+  display: flex;
+  justify-content: center;
+  padding-top: 1.15rem;
+}
+
+.timelineMarker {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid rgba(107, 114, 128, 0.3);
+  background: var(--bg);
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.timelineMarkerActive {
+  background: var(--primary);
+  border-color: var(--primary);
+  transform: scale(1.08);
+}
+
+.timelineContent,
+.projectCard {
+  padding: 1.35rem;
+  border-radius: 24px;
+  background: var(--card-bg);
+  border: 1px solid rgba(107, 114, 128, 0.14);
+}
+
+.timelineContent {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.highlights {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--muted);
+  display: grid;
+  gap: 0.45rem;
+}
+
+.projectsSection {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.projectsHeader {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.projectCard {
+  display: grid;
+  gap: 1rem;
+  transition:
+    transform 140ms ease,
+    border-color 140ms ease;
+}
+
+.projectCard:hover {
+  transform: translateY(-2px);
+  border-color: rgba(104, 80, 155, 0.28);
+}
+
+.projectTop {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.projectLabel,
+.projectTag {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  border: 1px solid rgba(107, 114, 128, 0.18);
+  padding: 0.35rem 0.75rem;
+  font-size: 0.84rem;
+}
+
+.projectLabel {
+  color: var(--primary);
+  white-space: nowrap;
+}
+
+.projectTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.projectLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 0.75rem 1rem;
+  background: rgba(104, 80, 155, 0.08);
+  color: var(--text);
+  transition:
+    transform 140ms ease,
+    background-color 140ms ease;
+}
+
+.projectLink:hover {
+  transform: translateY(-1px);
+}
+
+@media (max-width: 960px) {
+  .focusList,
+  .projectGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .timelineSection {
+    grid-template-columns: 1fr;
+  }
+
+  .timelineIntro,
+  .timelineRail {
+    position: relative;
+    top: auto;
+    height: auto;
+  }
+
+  .timelineRail {
+    min-height: 120px;
+  }
+
+  .timelineItems {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .page {
+    gap: 2rem;
+  }
+
+  .hero {
+    padding: 1.25rem;
+  }
+
+  .projectTop {
+    flex-direction: column;
+  }
+}
