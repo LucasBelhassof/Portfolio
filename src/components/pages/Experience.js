@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Button from '../ui/Button';
 import styles from './Experience.module.css';
 import Work from '../content/Work';
 import Projects from '../content/Projects';
@@ -15,12 +14,12 @@ const Experience = () => {
     <section className={styles.section}>
       <div className={styles.contentbutton}>
         <p>Projects</p>
-        <Button
+        <button
+          type="button"
           onClick={toggleSwitch}
           className={`${styles.button} ${isOn ? styles.on : ''}`}
-          variant="ghost"
-          size="sm"
           aria-pressed={isOn}
+          aria-label="Toggle between projects and work experience"
         />
         <p>Work</p>
       </div>
