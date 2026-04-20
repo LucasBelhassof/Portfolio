@@ -23,11 +23,22 @@ body,
 }
 
 body {
+  margin: 0;
   background-color: var(--bg);
   color: var(--text);
   transition:
     background-color 200ms ease,
     color 200ms ease;
+}
+
+#root {
+  min-height: 100%;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Make Bootstrap "bg-light" follow theme */
