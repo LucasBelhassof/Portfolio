@@ -1,22 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
 import { journeyFeaturedProjects } from '../../data/projectData';
-import {
-  journeyFocus,
-  journeyIntro,
-  journeyTimeline,
-} from '../../data/journeyData';
+import { journeyTimeline } from '../../data/journeyData';
 import styles from './Journey.module.css';
 
 const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
-const defaultJourneyIntro = {
-  eyebrow: 'My Journey',
-  title: 'A timeline shaped by curiosity, product thinking and real work.',
-  summary:
-    'My path into development grew through practice, projects and professional experience.',
-};
-const safeJourneyIntro = journeyIntro || defaultJourneyIntro;
-const safeJourneyFocus = Array.isArray(journeyFocus) ? journeyFocus : [];
-const safeJourneyTimeline = Array.isArray(journeyTimeline) ? journeyTimeline : [];
+const safeJourneyTimeline = Array.isArray(journeyTimeline)
+  ? journeyTimeline
+  : [];
 
 const Journey = () => {
   const timelineRef = useRef(null);
@@ -72,20 +62,6 @@ const Journey = () => {
 
   return (
     <div className={styles.page}>
-      <section className={styles.hero}>
-        <span className={styles.eyebrow}>{safeJourneyIntro.eyebrow}</span>
-        <h2 className={styles.heroTitle}>{safeJourneyIntro.title}</h2>
-        <p className={styles.heroSummary}>{safeJourneyIntro.summary}</p>
-        <div className={styles.focusList}>
-          {safeJourneyFocus.map((item) => (
-            <div key={item} className={styles.focusItem}>
-              <span className={styles.focusBullet} />
-              <p>{item}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
       <section className={styles.timelineSection} ref={timelineRef}>
         <div className={styles.timelineIntro}>
           <span className={styles.sectionLabel}>Timeline</span>
