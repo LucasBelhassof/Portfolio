@@ -62,17 +62,19 @@ const Journey = () => {
 
   return (
     <div className={styles.page}>
-      <section className={styles.timelineSection} ref={timelineRef}>
-        <div className={styles.timelineIntro}>
-          <span className={styles.sectionLabel}>Timeline</span>
-          <h3>Scroll through the milestones that shaped my trajectory.</h3>
-          <p>
-            The line below grows with the page scroll and connects the
-            experiences, projects and transitions that moved me toward software
-            development.
-          </p>
+      <section className={styles.timelineHeader}>
+        <div className={styles.headerColumn}>
+          <span className={styles.sectionLabel}>Personal Projects</span>
+          <h3>Learning, building and exploring products.</h3>
         </div>
+        <div className={styles.headerDivider} />
+        <div className={styles.headerColumn}>
+          <span className={styles.sectionLabel}>Professional Work</span>
+          <h3>Operational and software experiences that shaped my path.</h3>
+        </div>
+      </section>
 
+      <section className={styles.timelineSection} ref={timelineRef}>
         <div className={styles.timelineRail} aria-hidden="true" ref={railRef}>
           <div className={styles.timelineLine} />
           <div
@@ -81,16 +83,35 @@ const Journey = () => {
           />
         </div>
 
-        <div className={styles.timelineItems}>
+        <div className={styles.timelineRows}>
           {safeJourneyTimeline.map((item, index) => {
             const isActive = activeIndexes[index];
+            const isLeft = item.side === 'left';
 
             return (
               <article
                 key={item.id}
-                className={`${styles.timelineCard} ${isActive ? styles.timelineCardActive : ''}`}
+                className={`${styles.timelineRow} ${isActive ? styles.timelineRowActive : ''}`}
               >
-                <div className={styles.timelineMarkerWrap}>
+                <div className={styles.rowSide}>
+                  {isLeft ? (
+                    <div className={styles.timelineContent}>
+                      <span className={styles.period}>{item.period}</span>
+                      <h4>{item.title}</h4>
+                      <p className={styles.subtitle}>{item.subtitle}</p>
+                      <p className={styles.body}>{item.body}</p>
+                      <ul className={styles.highlights}>
+                        {item.highlights.map((highlight) => (
+                          <li key={`${item.id}-${highlight}`}>{highlight}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : (
+                    <div className={styles.emptySide} aria-hidden="true" />
+                  )}
+                </div>
+
+                <div className={styles.markerColumn}>
                   <span
                     ref={(element) => {
                       markerRefs.current[index] = element;
@@ -98,16 +119,23 @@ const Journey = () => {
                     className={`${styles.timelineMarker} ${isActive ? styles.timelineMarkerActive : ''}`}
                   />
                 </div>
-                <div className={styles.timelineContent}>
-                  <span className={styles.period}>{item.period}</span>
-                  <h4>{item.title}</h4>
-                  <p className={styles.subtitle}>{item.subtitle}</p>
-                  <p className={styles.body}>{item.body}</p>
-                  <ul className={styles.highlights}>
-                    {item.highlights.map((highlight) => (
-                      <li key={`${item.id}-${highlight}`}>{highlight}</li>
-                    ))}
-                  </ul>
+
+                <div className={styles.rowSide}>
+                  {!isLeft ? (
+                    <div className={styles.timelineContent}>
+                      <span className={styles.period}>{item.period}</span>
+                      <h4>{item.title}</h4>
+                      <p className={styles.subtitle}>{item.subtitle}</p>
+                      <p className={styles.body}>{item.body}</p>
+                      <ul className={styles.highlights}>
+                        {item.highlights.map((highlight) => (
+                          <li key={`${item.id}-${highlight}`}>{highlight}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : (
+                    <div className={styles.emptySide} aria-hidden="true" />
+                  )}
                 </div>
               </article>
             );

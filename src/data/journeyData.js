@@ -8,6 +8,7 @@ export const journeyIntro = {
 export const journeyTimeline = [
   {
     id: 'vipnote',
+    side: 'right',
     period: '2022',
     title: 'Vipnote',
     subtitle: 'Marketplace operations and customer support',
@@ -20,6 +21,7 @@ export const journeyTimeline = [
   },
   {
     id: 'five',
+    side: 'right',
     period: '2023',
     title: 'Five E-commercer',
     subtitle: 'Expanding operational ownership across marketplaces',
@@ -32,6 +34,7 @@ export const journeyTimeline = [
   },
   {
     id: 'projects',
+    side: 'left',
     period: '2023-2025',
     title: 'Learning by building',
     subtitle: 'Projects that turned study into practice',
@@ -44,6 +47,7 @@ export const journeyTimeline = [
   },
   {
     id: 'imovel-guide',
+    side: 'right',
     period: '2025',
     title: 'Imovel Guide',
     subtitle: 'Front-end developer internship',
@@ -56,6 +60,7 @@ export const journeyTimeline = [
   },
   {
     id: 'aprovei',
+    side: 'right',
     period: '2025-2026',
     title: 'Aprovei Hub',
     subtitle: 'Fullstack developer in product delivery',
@@ -68,6 +73,7 @@ export const journeyTimeline = [
   },
   {
     id: 'today',
+    side: 'left',
     period: 'Now',
     title: 'Current focus',
     subtitle: 'Growing into a stronger fullstack product engineer',
