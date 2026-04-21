@@ -1,16 +1,25 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import foto1 from '../../img/Foto1.jpeg';
 import foto2 from '../../img/unicesumar_logo.png';
-import { homeFeaturedProjects } from '../../data/projectData';
+import { getHomeFeaturedProjects } from '../../data/projectData';
 import Linkicon from '../layouts/Linksicon';
 import styles from './Home.module.css';
 
 const Home = () => {
+  const { t } = useTranslation();
+  const homeFeaturedProjects = getHomeFeaturedProjects(t);
+  const courses = t('home.courses', { returnObjects: true });
+
   return (
     <div>
       <div>
         <section className={styles.section1}>
-          <img className={styles.foto1} src={foto1} alt="Foto" />
+          <img
+            className={styles.foto1}
+            src={foto1}
+            alt={t('home.profilePhotoAlt')}
+          />
           <div className="d-grid m-2">
             <Linkicon />
             <div
@@ -19,8 +28,12 @@ const Home = () => {
                 alignItems: 'center',
               }}
             >
-              <img className={styles.foto2} src={foto2} alt="UNICESUMAR" />
-              <p>Currently, Software Engineering student @UNICESUMAR</p>
+              <img
+                className={styles.foto2}
+                src={foto2}
+                alt={t('home.educationLogoAlt')}
+              />
+              <p>{t('home.studentStatus')}</p>
             </div>
           </div>
         </section>
@@ -54,7 +67,7 @@ const Home = () => {
                 fontSize: '24px',
               }}
             >
-              Complementary Courses
+              {t('home.coursesTitle')}
             </h4>
             <ul
               className="mb-3"
@@ -64,60 +77,14 @@ const Home = () => {
                 margin: '0 0 20px',
               }}
             >
-              <li className="mb-2">
-                Ingles Avancado{' '}
-                <span className="border border-gray-300 rounded-pill px-2 small">
-                  Ibeu
-                </span>
-              </li>
-              <li className="mb-2">
-                Google Cloud Plataform{' '}
-                <span className="border border-gray-300 rounded-pill px-2 small">
-                  Google
-                </span>
-              </li>
-              <li className="mb-2">
-                Introductory Course on Computer Science with Python{' '}
-                <span className="border border-gray-300 rounded-pill px-2 small">
-                  Coursera
-                </span>
-              </li>
-              <li className="mb-2">
-                Course C# Complete{' '}
-                <span className="border border-gray-300 rounded-pill px-2 small">
-                  Udemy
-                </span>
-              </li>
-              <li className="mb-2">
-                Course Flutter Complete{' '}
-                <span className="border border-gray-300 rounded-pill px-2 small">
-                  Udemy
-                </span>
-              </li>
-              <li className="mb-2">
-                Data interpretation through descriptive statistics{' '}
-                <span className="border border-gray-300 rounded-pill px-2 small">
-                  Unicesumar
-                </span>
-              </li>
-              <li className="mb-2">
-                Course JavaScript{' '}
-                <span className="border border-gray-300 rounded-pill px-2 small">
-                  Alura
-                </span>
-              </li>
-              <li className="mb-2">
-                Course HTML e CSS{' '}
-                <span className="border border-gray-300 rounded-pill px-2 small">
-                  Alura
-                </span>
-              </li>
-              <li className="mb-2">
-                Course Java{' '}
-                <span className="border border-gray-300 rounded-pill px-2 small">
-                  Alura
-                </span>
-              </li>
+              {courses.map((course) => (
+                <li key={`${course.title}-${course.provider}`} className="mb-2">
+                  {course.title}{' '}
+                  <span className="border border-gray-300 rounded-pill px-2 small">
+                    {course.provider}
+                  </span>
+                </li>
+              ))}
             </ul>
           </div>
         </section>

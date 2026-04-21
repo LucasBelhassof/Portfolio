@@ -1,0 +1,260 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "emailMe": "Email me",
+    "openRepository": "Open repository",
+    "privateRepository": "Private Repository",
+    "privateCaseStudy": "Private case study",
+    "code": "//Code"
+  },
+  "navbar": {
+    "links": {
+      "experience": "EXPERIENCE",
+      "journey": "MY JOURNEY"
+    },
+    "themeToggleLabel": "Toggle theme",
+    "languageToggleLabel": "Select language",
+    "switchLanguage": "Switch language to {{language}}",
+    "languages": {
+      "pt": "PT",
+      "en": "EN",
+      "ptLabel": "Portuguese",
+      "enLabel": "English"
+    }
+  },
+  "social": {
+    "instagram": "Open Instagram profile",
+    "github": "Open GitHub profile",
+    "linkedin": "Open LinkedIn profile"
+  },
+  "home": {
+    "profilePhotoAlt": "Portrait of Lucas Belhassof Leao",
+    "educationLogoAlt": "Unicesumar logo",
+    "studentStatus": "Currently a Software Engineering student at UNICESUMAR",
+    "coursesTitle": "Complementary Courses",
+    "courses": [
+      {
+        "title": "Advanced English",
+        "provider": "Ibeu"
+      },
+      {
+        "title": "Google Cloud Platform",
+        "provider": "Google"
+      },
+      {
+        "title": "Introductory Course on Computer Science with Python",
+        "provider": "Coursera"
+      },
+      {
+        "title": "Complete C# Course",
+        "provider": "Udemy"
+      },
+      {
+        "title": "Complete Flutter Course",
+        "provider": "Udemy"
+      },
+      {
+        "title": "Data interpretation through descriptive statistics",
+        "provider": "Unicesumar"
+      },
+      {
+        "title": "JavaScript Course",
+        "provider": "Alura"
+      },
+      {
+        "title": "HTML and CSS Course",
+        "provider": "Alura"
+      },
+      {
+        "title": "Java Course",
+        "provider": "Alura"
+      }
+    ]
+  },
+  "experience": {
+    "projectsLabel": "Projects",
+    "workLabel": "Work",
+    "toggleAria": "Toggle between projects and work experience",
+    "workHistory": [
+      {
+        "company": "Aprovei Hub",
+        "period": "September 2025 - April 2026",
+        "role": "Fullstack Developer",
+        "highlights": [
+          "Worked on the development and maintenance of features for the Aprovei Checkout platform.",
+          "Implemented frontend interfaces, backend integrations, data modeling and data manipulation flows.",
+          "Acted on bug fixing, performance improvements and technical planning for new product features.",
+          "Contributed to scalable solutions, code quality and alignment between technical delivery and product goals."
+        ]
+      },
+      {
+        "company": "Imovel Guide (Grupo Atlasmaq do Brasil)",
+        "period": "May 2025 - July 2025",
+        "role": "Front-end Developer Intern",
+        "highlights": [
+          "Worked with the software development team on application implementation and maintenance.",
+          "Supported development tasks involving PHP, Java and JavaScript according to project needs.",
+          "Helped identify and resolve issues in existing systems while contributing to continuous improvements.",
+          "Provided technical support in the evolution of internal and business-oriented software solutions."
+        ]
+      },
+      {
+        "company": "Five E-commercer",
+        "period": "September 2023 - March 2026",
+        "role": "Sales, Customer Service and Marketplace Page Manager",
+        "highlights": [
+          "Handled customer support in both pre-sales and post-sales operations.",
+          "Managed marketplace listings on Mercado Livre, Americanas and Shopee.",
+          "Solved platform-related operational issues and supported the maintenance of product pages."
+        ]
+      },
+      {
+        "company": "Vipnote",
+        "period": "April 2022 - March 2026",
+        "role": "Sales, Customer Service and Marketplace Page Manager",
+        "highlights": [
+          "Handled customer support workflows in pre-sales and post-sales contexts.",
+          "Managed marketplace listings and operations on Mercado Livre and Amazon Seller.",
+          "Resolved operational and platform-related issues while keeping listings updated and functional."
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "items": {
+      "finly": {
+        "subtitle": "Full-stack finance platform",
+        "label": "Featured",
+        "description": "Full-stack finance platform with dashboard, insights, chat, API endpoints and Postgres persistence.",
+        "date": "2026",
+        "highlights": [
+          "Financial platform with dashboard, insights, chat and data persistence.",
+          "Built with a dedicated backend, REST API endpoints and SQL migrations.",
+          "Structured to run frontend and backend locally with a real database flow."
+        ]
+      },
+      "nexa-cliente": {
+        "subtitle": "Client-facing business platform",
+        "label": "Private case study",
+        "description": "Client-facing business system built with Laravel, Vue 3, Inertia and a modern operational stack.",
+        "date": "2026",
+        "highlights": [
+          "Client-oriented system built on Laravel and Vue 3 with a modern web stack.",
+          "Includes business features such as real-time communication and payment integrations.",
+          "Presented as a private case study because the repository is not public."
+        ]
+      },
+      "nexa-system": {
+        "subtitle": "Administrative core platform",
+        "label": "Private case study",
+        "description": "Administrative core platform designed to support structured operations in the NexaSystem ecosystem.",
+        "date": "2026",
+        "highlights": [
+          "Administrative system that complements the NexaSystem ecosystem.",
+          "Built with Laravel 12, Vue 3 and Inertia to support a structured operations flow.",
+          "Presented as a private case study because the repository is not public."
+        ]
+      },
+      "cost": {
+        "subtitle": "Project Manager",
+        "label": "Project manager",
+        "description": "Project and budget management application focused on categories, services and CRUD flows.",
+        "date": "March 1, 2025",
+        "highlights": [
+          "Project manager focused on budgets, categories and service control.",
+          "Includes CRUD flows to create projects and manage services within budget.",
+          "Uses a lightweight local backend strategy for development and data simulation."
+        ]
+      },
+      "real-trends-clone": {
+        "subtitle": "Flutter product interface recreation",
+        "label": "UI clone",
+        "description": "Clone inspired by a marketplace-focused product, recreated in Flutter to demonstrate product execution and interface fidelity.",
+        "date": "September 25, 2023",
+        "highlights": [
+          "Clone inspired by the Real Trends product and interface.",
+          "Focused on reproducing key flows and the overall visual structure of the platform.",
+          "Useful to demonstrate UI execution and product replication skills in Flutter."
+        ]
+      }
+    }
+  },
+  "journey": {
+    "header": {
+      "projectsEyebrow": "Personal Projects",
+      "projectsTitle": "Learning, building and exploring products.",
+      "workEyebrow": "Professional Work",
+      "workTitle": "Operational and software experiences that shaped my path."
+    },
+    "projectsSectionEyebrow": "Main Projects",
+    "projectsSectionTitle": "Projects that best represent the path behind this timeline.",
+    "timeline": {
+      "vipnote": {
+        "period": "2022",
+        "title": "Vipnote",
+        "subtitle": "Marketplace operations and customer support",
+        "body": "I spent this stage working directly with platform operations, listings and customer support. It gave me practical understanding of user friction, process bottlenecks and how digital platforms behave in the real world.",
+        "highlights": [
+          "Managed listings and operational routines in Mercado Livre and Amazon Seller.",
+          "Worked with pre-sales and post-sales support flows.",
+          "Built a strong business perspective before moving fully into software."
+        ]
+      },
+      "five": {
+        "period": "2023",
+        "title": "Five E-commercer",
+        "subtitle": "Expanding operational ownership across marketplaces",
+        "body": "This phase deepened my experience with marketplace ecosystems and strengthened my ability to solve problems under pressure, keep operations stable and understand digital commerce workflows end to end.",
+        "highlights": [
+          "Managed pages and listings across Mercado Livre, Americanas and Shopee.",
+          "Handled operational issues and customer interaction in fast-moving environments.",
+          "Improved my problem-solving discipline through daily platform constraints."
+        ]
+      },
+      "projects": {
+        "period": "2023-2025",
+        "title": "Learning by building",
+        "subtitle": "Projects that turned study into practice",
+        "body": "While working, I kept developing personal projects to translate learning into actual products. That habit helped me grow faster in interface construction, routing, data flow thinking and product execution.",
+        "highlights": [
+          "Built projects such as RealTrends Clone, Cost and later larger product-oriented systems.",
+          "Improved frontend structure, feature thinking and implementation discipline.",
+          "Used projects as a bridge between learning and professional readiness."
+        ]
+      },
+      "imovel-guide": {
+        "period": "2025",
+        "title": "Imovel Guide",
+        "subtitle": "Front-end developer internship",
+        "body": "My internship at Imovel Guide was the point where I started contributing inside a software team context. It was important for understanding collaboration, maintenance work and the rhythm of feature delivery in professional environments.",
+        "highlights": [
+          "Worked with software development tasks connected to PHP, Java and JavaScript.",
+          "Supported improvements and maintenance in existing systems.",
+          "Learned how development decisions connect to team workflow and delivery."
+        ]
+      },
+      "aprovei": {
+        "period": "2025-2026",
+        "title": "Aprovei Hub",
+        "subtitle": "Fullstack developer in product delivery",
+        "body": "At Aprovei Hub, I moved into fullstack work, contributing to frontend interfaces, backend integrations, data modeling, bug fixing and performance improvements. This stage consolidated the direction I want for my career.",
+        "highlights": [
+          "Worked on features for Aprovei Checkout across frontend and backend.",
+          "Participated in technical planning and implementation decisions.",
+          "Focused on scalability, code quality and alignment with product goals."
+        ]
+      },
+      "today": {
+        "period": "Now",
+        "title": "Current focus",
+        "subtitle": "Advancing my career while building stronger digital products",
+        "body": "Right now, I am working toward my next opportunity in software development while continuing to turn independent ideas into polished fullstack products with real user value.",
+        "highlights": [
+          "Pushing Finly forward as a SaaS product with practical features and clearer product direction.",
+          "Evolving NexaSystem into a more complete dashboard experience across interface and data layers.",
+          "Strengthening the kind of portfolio that shows execution, ownership and fullstack product development."
+        ]
+      }
+    }
+  }
+}
