@@ -103,8 +103,8 @@ src/
     pt/
   routes/
   img/
-  App.js
-  index.js
+  App.jsx
+  index.jsx
 .github/workflows/
 netlify.toml
 eslint.config.js
