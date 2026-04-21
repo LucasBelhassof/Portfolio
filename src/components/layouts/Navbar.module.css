@@ -51,6 +51,7 @@
 .themeToggle:hover {
   transform: none !important;
   background: transparent !important;
+  color: var(--primary);
 }
 
 .themeToggle:focus {
@@ -91,36 +92,23 @@
 .languageToggle {
   display: inline-flex;
   align-items: center;
-  padding: 0.2rem;
-  border-radius: 999px;
-  background: rgba(104, 80, 155, 0.08);
-  border: 1px solid rgba(107, 114, 128, 0.16);
-}
-
-.languageButton {
-  min-width: 42px;
-  height: 32px;
-  border-radius: 999px;
-  padding: 0 0.7rem;
-  font-size: 0.78rem;
-  letter-spacing: 0.08em;
-  color: var(--muted);
-}
-
-.languageButton:hover {
-  transform: none !important;
-  background: transparent !important;
+  justify-content: center;
+  min-width: 36px;
+  height: 36px;
+  padding: 6px;
+  border-radius: 6px;
   color: var(--text);
 }
 
-.languageButtonActive {
-  background: var(--bg) !important;
+.languageToggle:hover {
+  transform: none !important;
+  background: transparent !important;
   color: var(--primary) !important;
-  box-shadow: 0 1px 8px rgba(15, 23, 42, 0.08);
 }
 
-.languageButtonActive:hover {
-  background: var(--bg) !important;
+.languageToggle:focus {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 /* Ensure theme button visually matches icons */
@@ -166,11 +154,6 @@
 
   .controls {
     gap: 0.5rem;
-  }
-
-  .languageButton {
-    min-width: 40px;
-    padding: 0 0.6rem;
   }
 
   .navbar h1 {

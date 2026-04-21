@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { GoMoon } from 'react-icons/go';
+import { MdTranslate } from 'react-icons/md';
 import { MdOutlineWbSunny } from 'react-icons/md';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
@@ -24,7 +25,6 @@ const Navbar = () => {
     { to: '/journey', label: t('navbar.links.journey') },
   ];
   const activeLanguage = i18n.resolvedLanguage || i18n.language || 'en';
-  const languageOptions = ['pt', 'en'];
 
   useEffect(() => {
     try {
@@ -39,12 +39,9 @@ const Navbar = () => {
     setTheme((currentTheme) => (currentTheme === 'light' ? 'dark' : 'light'));
   };
 
-  const changeLanguage = (language) => {
-    if (language === activeLanguage) {
-      return;
-    }
-
-    i18n.changeLanguage(language);
+  const toggleLanguage = () => {
+    const nextLanguage = activeLanguage === 'pt' ? 'en' : 'pt';
+    i18n.changeLanguage(nextLanguage);
   };
 
   return (
@@ -70,37 +67,28 @@ const Navbar = () => {
             })}
           </div>
           {!isHomeRoute ? <Linkicon /> : null}
-          <div
-            className={styles.languageToggle}
-            role="group"
-            aria-label={t('navbar.languageToggleLabel')}
-          >
-            {languageOptions.map((language) => {
-              const isActive = activeLanguage === language;
-
-              return (
-                <Button
-                  key={language}
-                  type="button"
-                  onClick={() => changeLanguage(language)}
-                  aria-pressed={isActive}
-                  aria-label={t('navbar.switchLanguage', {
-                    language: t(`navbar.languages.${language}Label`),
-                  })}
-                  className={`${styles.languageButton} ${isActive ? styles.languageButtonActive : ''}`}
-                  variant="ghost"
-                  size="sm"
-                >
-                  {t(`navbar.languages.${language}`)}
-                </Button>
-              );
+          <Button
+            type="button"
+            onClick={toggleLanguage}
+            aria-label={t('navbar.switchLanguage', {
+              language: t(
+                `navbar.languages.${activeLanguage === 'pt' ? 'enLabel' : 'ptLabel'}`,
+              ),
             })}
-          </div>
+            title={`${t('navbar.languages.' + activeLanguage)} · ${t(
+              'navbar.languageToggleLabel',
+            )}`}
+            className={styles.languageToggle}
+            variant="navButton"
+            size="sm"
+          >
+            <MdTranslate />
+          </Button>
           <Button
             onClick={toggleTheme}
             aria-label={t('navbar.themeToggleLabel')}
             className={styles.themeToggle}
-            variant="ghost"
+            variant="navButton"
             size="sm"
           >
             {theme === 'light' ? <GoMoon /> : <MdOutlineWbSunny />}
