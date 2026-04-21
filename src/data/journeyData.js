@@ -76,12 +76,12 @@ export const journeyTimeline = [
     side: 'left',
     period: 'Now',
     title: 'Current focus',
-    subtitle: 'Growing into a stronger fullstack product engineer',
-    body: 'Today, I am focused on becoming a developer who can move well between interface, backend logic and product needs. I want to keep building systems that are useful, clear and technically reliable.',
+    subtitle: 'Advancing my career while building stronger digital products',
+    body: 'Right now, I am working toward my next opportunity in software development while continuing to turn independent ideas into polished fullstack products with real user value.',
     highlights: [
-      'Deepening experience in React, Vue, Laravel, Node.js and database-backed products.',
-      'Improving architecture decisions, performance thinking and maintainability.',
-      'Building a portfolio that reflects real delivery and product-oriented development.',
+      'Pushing Finly forward as a SaaS product with practical features and clearer product direction.',
+      'Evolving NexaSystem into a more complete dashboard experience across interface and data layers.',
+      'Strengthening the kind of portfolio that shows execution, ownership and fullstack product development.',
     ],
   },
 ];

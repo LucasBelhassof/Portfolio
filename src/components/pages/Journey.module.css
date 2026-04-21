@@ -258,6 +258,10 @@
     gap: 2rem;
   }
 
+  .timelineHeader {
+    display: none;
+  }
+
   .projectTop {
     flex-direction: column;
   }
