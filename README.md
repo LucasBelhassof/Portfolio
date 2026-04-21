@@ -2,6 +2,8 @@
 
 Personal portfolio website built with React and deployed on Netlify. The project uses Create React App for bundling, React Router for client-side navigation, and Bootstrap plus CSS modules for styling.
 
+The UI supports bilingual content in English (`en`) and Portuguese (`pt`) using `react-i18next`.
+
 ## Tech Stack
 
 - React 19
@@ -95,10 +97,14 @@ src/
     pages/
     ui/
   layouts/
+  i18n/
+  locales/
+    en/
+    pt/
   routes/
   img/
-  App.js
-  index.js
+  App.jsx
+  index.jsx
 .github/workflows/
 netlify.toml
 eslint.config.js
@@ -108,3 +114,5 @@ eslint.config.js
 
 - The current stack remains CRA by design to preserve the existing production deployment behavior.
 - Infrastructure improvements in this pass focus on DX, consistency, CI, and deploy safety without changing the hosting platform.
+- Translation files live in `src/locales/en/translation.json` and `src/locales/pt/translation.json`.
+- Update those locale files to edit translated copy or add another language later.

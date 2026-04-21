@@ -1,0 +1,260 @@
+{
+  "common": {
+    "loading": "Carregando...",
+    "emailMe": "Fale comigo",
+    "openRepository": "Abrir repositório",
+    "privateRepository": "Repositório privado",
+    "privateCaseStudy": "Case privado",
+    "code": "//Código"
+  },
+  "navbar": {
+    "links": {
+      "experience": "EXPERIÊNCIA",
+      "journey": "MINHA JORNADA"
+    },
+    "themeToggleLabel": "Alternar tema",
+    "languageToggleLabel": "Selecionar idioma",
+    "switchLanguage": "Mudar idioma para {{language}}",
+    "languages": {
+      "pt": "PT",
+      "en": "EN",
+      "ptLabel": "Português",
+      "enLabel": "Inglês"
+    }
+  },
+  "social": {
+    "instagram": "Abrir perfil do Instagram",
+    "github": "Abrir perfil do GitHub",
+    "linkedin": "Abrir perfil do LinkedIn"
+  },
+  "home": {
+    "profilePhotoAlt": "Retrato de Lucas Belhassof Leao",
+    "educationLogoAlt": "Logo da Unicesumar",
+    "studentStatus": "Atualmente cursando Engenharia de Software na UNICESUMAR",
+    "coursesTitle": "Cursos Complementares",
+    "courses": [
+      {
+        "title": "Inglês Avançado",
+        "provider": "Ibeu"
+      },
+      {
+        "title": "Google Cloud Platform",
+        "provider": "Google"
+      },
+      {
+        "title": "Curso Introdutório de Ciência da Computação com Python",
+        "provider": "Coursera"
+      },
+      {
+        "title": "Curso Completo de C#",
+        "provider": "Udemy"
+      },
+      {
+        "title": "Curso Completo de Flutter",
+        "provider": "Udemy"
+      },
+      {
+        "title": "Interpretação de dados por meio de estatística descritiva",
+        "provider": "Unicesumar"
+      },
+      {
+        "title": "Curso de JavaScript",
+        "provider": "Alura"
+      },
+      {
+        "title": "Curso de HTML e CSS",
+        "provider": "Alura"
+      },
+      {
+        "title": "Curso de Java",
+        "provider": "Alura"
+      }
+    ]
+  },
+  "experience": {
+    "projectsLabel": "Projetos",
+    "workLabel": "Trabalho",
+    "toggleAria": "Alternar entre projetos e experiência profissional",
+    "workHistory": [
+      {
+        "company": "Aprovei Hub",
+        "period": "Setembro de 2025 - Abril de 2026",
+        "role": "Desenvolvedor Full Stack",
+        "highlights": [
+          "Atuei no desenvolvimento e na manutenção de funcionalidades da plataforma Aprovei Checkout.",
+          "Implementei interfaces front-end, integrações back-end, modelagem de dados e fluxos de manipulação de dados.",
+          "Trabalhei em correção de bugs, melhorias de performance e planejamento técnico de novas funcionalidades.",
+          "Contribuí para soluções escaláveis, qualidade de código e alinhamento entre entrega técnica e objetivos de produto."
+        ]
+      },
+      {
+        "company": "Imovel Guide (Grupo Atlasmaq do Brasil)",
+        "period": "Maio de 2025 - Julho de 2025",
+        "role": "Estagiário de Front-end",
+        "highlights": [
+          "Atuei com o time de desenvolvimento de software na implementação e manutenção de aplicações.",
+          "Apoiei tarefas envolvendo PHP, Java e JavaScript de acordo com as necessidades dos projetos.",
+          "Ajudei a identificar e resolver problemas em sistemas existentes, contribuindo para melhorias contínuas.",
+          "Prestei suporte técnico na evolução de soluções internas e orientadas ao negócio."
+        ]
+      },
+      {
+        "company": "Five E-commercer",
+        "period": "Setembro de 2023 - Março de 2026",
+        "role": "Vendas, Atendimento e Gestão de Páginas em Marketplaces",
+        "highlights": [
+          "Atuei no atendimento ao cliente em operações de pré-venda e pós-venda.",
+          "Gerenciei anúncios em marketplaces como Mercado Livre, Americanas e Shopee.",
+          "Resolvi questões operacionais ligadas às plataformas e apoiei a manutenção das páginas de produtos."
+        ]
+      },
+      {
+        "company": "Vipnote",
+        "period": "Abril de 2022 - Março de 2026",
+        "role": "Vendas, Atendimento e Gestão de Páginas em Marketplaces",
+        "highlights": [
+          "Atuei em fluxos de atendimento ao cliente em contextos de pré-venda e pós-venda.",
+          "Gerenciei anúncios e operações em Mercado Livre e Amazon Seller.",
+          "Resolvi problemas operacionais e relacionados às plataformas, mantendo os anúncios atualizados e funcionais."
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "items": {
+      "finly": {
+        "subtitle": "Plataforma financeira full stack",
+        "label": "Destaque",
+        "description": "Plataforma financeira full stack com dashboard, insights, chat, endpoints de API e persistência em Postgres.",
+        "date": "2026",
+        "highlights": [
+          "Plataforma financeira com dashboard, insights, chat e persistência de dados.",
+          "Construída com backend dedicado, endpoints REST e migrações SQL.",
+          "Estruturada para rodar front-end e back-end localmente com um fluxo real de banco de dados."
+        ]
+      },
+      "nexa-cliente": {
+        "subtitle": "Plataforma de negócio voltada ao cliente",
+        "label": "Case privado",
+        "description": "Sistema voltado ao cliente construído com Laravel, Vue 3, Inertia e uma stack operacional moderna.",
+        "date": "2026",
+        "highlights": [
+          "Sistema orientado ao cliente construído com Laravel e Vue 3 em uma stack web moderna.",
+          "Inclui funcionalidades de negócio como comunicação em tempo real e integrações de pagamento.",
+          "Apresentado como case privado porque o repositório não é público."
+        ]
+      },
+      "nexa-system": {
+        "subtitle": "Plataforma administrativa central",
+        "label": "Case privado",
+        "description": "Plataforma administrativa central desenhada para apoiar operações estruturadas no ecossistema NexaSystem.",
+        "date": "2026",
+        "highlights": [
+          "Sistema administrativo que complementa o ecossistema NexaSystem.",
+          "Construído com Laravel 12, Vue 3 e Inertia para sustentar um fluxo operacional estruturado.",
+          "Apresentado como case privado porque o repositório não é público."
+        ]
+      },
+      "cost": {
+        "subtitle": "Gerenciador de projetos",
+        "label": "Gerenciador de projetos",
+        "description": "Aplicação de gestão de projetos e orçamentos focada em categorias, serviços e fluxos CRUD.",
+        "date": "1 de março de 2025",
+        "highlights": [
+          "Gerenciador de projetos focado em orçamentos, categorias e controle de serviços.",
+          "Inclui fluxos CRUD para criar projetos e gerenciar serviços dentro do orçamento.",
+          "Usa uma estratégia leve de backend local para desenvolvimento e simulação de dados."
+        ]
+      },
+      "real-trends-clone": {
+        "subtitle": "Recriação de interface de produto em Flutter",
+        "label": "Clone de UI",
+        "description": "Clone inspirado em um produto voltado a marketplaces, recriado em Flutter para demonstrar execução de produto e fidelidade de interface.",
+        "date": "25 de setembro de 2023",
+        "highlights": [
+          "Clone inspirado no produto e na interface da Real Trends.",
+          "Focado em reproduzir fluxos-chave e a estrutura visual geral da plataforma.",
+          "Útil para demonstrar execução de UI e habilidades de replicação de produto em Flutter."
+        ]
+      }
+    }
+  },
+  "journey": {
+    "header": {
+      "projectsEyebrow": "Projetos Pessoais",
+      "projectsTitle": "Aprendendo, construindo e explorando produtos.",
+      "workEyebrow": "Experiência Profissional",
+      "workTitle": "Vivências operacionais e em software que moldaram meu caminho."
+    },
+    "projectsSectionEyebrow": "Principais Projetos",
+    "projectsSectionTitle": "Projetos que melhor representam o caminho por trás desta timeline.",
+    "timeline": {
+      "vipnote": {
+        "period": "2022",
+        "title": "Vipnote",
+        "subtitle": "Operações em marketplace e atendimento ao cliente",
+        "body": "Passei essa fase atuando diretamente com operações de plataforma, anúncios e atendimento ao cliente. Isso me deu uma compreensão prática sobre atritos do usuário, gargalos de processo e como plataformas digitais funcionam no mundo real.",
+        "highlights": [
+          "Gerenciei anúncios e rotinas operacionais no Mercado Livre e Amazon Seller.",
+          "Atuei em fluxos de pré-venda e pós-venda.",
+          "Construí uma visão forte de negócio antes de migrar de vez para software."
+        ]
+      },
+      "five": {
+        "period": "2023",
+        "title": "Five E-commercer",
+        "subtitle": "Expandindo responsabilidade operacional em marketplaces",
+        "body": "Essa fase aprofundou minha experiência com ecossistemas de marketplace e fortaleceu minha capacidade de resolver problemas sob pressão, manter operações estáveis e entender fluxos de comércio digital de ponta a ponta.",
+        "highlights": [
+          "Gerenciei páginas e anúncios em Mercado Livre, Americanas e Shopee.",
+          "Lidei com questões operacionais e interação com clientes em ambientes dinâmicos.",
+          "Melhorei minha disciplina de resolução de problemas diante das restrições diárias das plataformas."
+        ]
+      },
+      "projects": {
+        "period": "2023-2025",
+        "title": "Aprendendo construindo",
+        "subtitle": "Projetos que transformaram estudo em prática",
+        "body": "Enquanto trabalhava, continuei desenvolvendo projetos pessoais para transformar aprendizado em produtos reais. Esse hábito acelerou meu crescimento em construção de interfaces, roteamento, raciocínio sobre fluxo de dados e execução de produto.",
+        "highlights": [
+          "Construí projetos como RealTrends Clone, Cost e depois sistemas maiores orientados a produto.",
+          "Evoluí estrutura de front-end, visão de funcionalidade e disciplina de implementação.",
+          "Usei projetos como ponte entre aprendizado e prontidão profissional."
+        ]
+      },
+      "imovel-guide": {
+        "period": "2025",
+        "title": "Imovel Guide",
+        "subtitle": "Estágio em desenvolvimento front-end",
+        "body": "Meu estágio na Imovel Guide foi o ponto em que comecei a contribuir dentro de um contexto real de equipe de software. Foi importante para entender colaboração, manutenção e o ritmo de entrega de funcionalidades em ambientes profissionais.",
+        "highlights": [
+          "Atuei em tarefas de desenvolvimento ligadas a PHP, Java e JavaScript.",
+          "Apoiei melhorias e manutenção em sistemas existentes.",
+          "Aprendi como decisões de desenvolvimento se conectam ao fluxo de trabalho e à entrega do time."
+        ]
+      },
+      "aprovei": {
+        "period": "2025-2026",
+        "title": "Aprovei Hub",
+        "subtitle": "Desenvolvedor full stack em entrega de produto",
+        "body": "Na Aprovei Hub, avancei para um trabalho full stack, contribuindo com interfaces front-end, integrações back-end, modelagem de dados, correção de bugs e melhorias de performance. Essa etapa consolidou a direção que quero para minha carreira.",
+        "highlights": [
+          "Atuei em funcionalidades do Aprovei Checkout no front-end e no back-end.",
+          "Participei de planejamento técnico e decisões de implementação.",
+          "Mantive foco em escalabilidade, qualidade de código e alinhamento com objetivos de produto."
+        ]
+      },
+      "today": {
+        "period": "Agora",
+        "title": "Foco atual",
+        "subtitle": "Avançando na carreira enquanto construo produtos digitais mais sólidos",
+        "body": "Neste momento, estou buscando minha próxima oportunidade em desenvolvimento de software enquanto continuo transformando ideias independentes em produtos full stack mais polidos e com valor real para o usuário.",
+        "highlights": [
+          "Levando o Finly adiante como um SaaS com funcionalidades práticas e direção de produto mais clara.",
+          "Evoluindo o NexaSystem para uma experiência de dashboard mais completa entre interface e camada de dados.",
+          "Fortalecendo um portfólio que demonstra execução, autonomia e desenvolvimento full stack orientado a produto."
+        ]
+      }
+    }
+  }
+}

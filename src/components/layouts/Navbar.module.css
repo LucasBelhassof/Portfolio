@@ -51,6 +51,7 @@
 .themeToggle:hover {
   transform: none !important;
   background: transparent !important;
+  color: var(--primary);
 }
 
 .themeToggle:focus {
@@ -65,6 +66,13 @@
   gap: 0.75rem;
   flex-wrap: wrap;
   justify-content: flex-end;
+}
+
+.navGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .navLinks {
@@ -86,6 +94,28 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+
+.languageToggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  height: 36px;
+  padding: 6px;
+  border-radius: 6px;
+  color: var(--text);
+}
+
+.languageToggle:hover {
+  transform: none !important;
+  background: transparent !important;
+  color: var(--primary) !important;
+}
+
+.languageToggle:focus {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 /* Ensure theme button visually matches icons */
@@ -114,6 +144,10 @@
   .controls {
     width: 100%;
     justify-content: space-between;
+  }
+
+  .navGroup {
+    flex: 1 1 auto;
   }
 }
 

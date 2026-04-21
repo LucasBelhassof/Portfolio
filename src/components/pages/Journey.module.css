@@ -222,6 +222,10 @@
 }
 
 @media (max-width: 960px) {
+  .timelineHeader {
+    display: none;
+  }
+
   .projectGrid {
     grid-template-columns: 1fr;
   }

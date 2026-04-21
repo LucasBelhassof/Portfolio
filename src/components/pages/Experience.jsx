@@ -1,27 +1,29 @@
 import { useState } from 'react';
-import styles from './Experience.module.css';
-import Work from '../content/Work';
+import { useTranslation } from 'react-i18next';
 import Projects from '../content/Projects';
+import Work from '../content/Work';
+import styles from './Experience.module.css';
 
 const Experience = () => {
-  const [isOn, setIsOn] = useState(false); // Estado inicial para o botão
+  const { t } = useTranslation();
+  const [isOn, setIsOn] = useState(false);
 
   const toggleSwitch = () => {
-    setIsOn(!isOn); // Alterna entre ligado (true) e desligado (false)
+    setIsOn((currentValue) => !currentValue);
   };
 
   return (
     <section className={styles.section}>
       <div className={styles.contentbutton}>
-        <p>Projects</p>
+        <p>{t('experience.projectsLabel')}</p>
         <button
           type="button"
           onClick={toggleSwitch}
           className={`${styles.button} ${isOn ? styles.on : ''}`}
           aria-pressed={isOn}
-          aria-label="Toggle between projects and work experience"
+          aria-label={t('experience.toggleAria')}
         />
-        <p>Work</p>
+        <p>{t('experience.workLabel')}</p>
       </div>
       <div className={styles.content}>{isOn ? <Work /> : <Projects />}</div>
     </section>

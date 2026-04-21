@@ -1,6 +1,10 @@
-import { projectData } from '../../data/projectData';
+import { useTranslation } from 'react-i18next';
+import { getProjectData } from '../../data/projectData';
 
 const Projects = () => {
+  const { t } = useTranslation();
+  const projectData = getProjectData(t);
+
   return (
     <div
       className="container mx-4 my-4 p-4 bg-light rounded shadow"
@@ -19,7 +23,7 @@ const Projects = () => {
                   className="border border-gray-300 rounded-pill px-2 small"
                   style={{ fontSize: '13px' }}
                 >
-                  Private Repository
+                  {t('common.privateRepository')}
                 </span>
               ) : (
                 <a
@@ -29,7 +33,7 @@ const Projects = () => {
                   rel="noopener noreferrer"
                   style={{ fontSize: '18px' }}
                 >
-                  {'//Code'}
+                  {t('common.code')}
                 </a>
               )}
             </h3>

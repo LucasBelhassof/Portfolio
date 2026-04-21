@@ -1,21 +1,20 @@
 import { useEffect, useRef, useState } from 'react';
-import { journeyFeaturedProjects } from '../../data/projectData';
-import { journeyTimeline } from '../../data/journeyData';
+import { useTranslation } from 'react-i18next';
+import { getJourneyFeaturedProjects } from '../../data/projectData';
+import { getJourneyTimeline } from '../../data/journeyData';
 import styles from './Journey.module.css';
 
 const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
-const safeJourneyTimeline = Array.isArray(journeyTimeline)
-  ? journeyTimeline
-  : [];
 
 const Journey = () => {
+  const { t } = useTranslation();
+  const safeJourneyTimeline = getJourneyTimeline(t);
+  const journeyFeaturedProjects = getJourneyFeaturedProjects(t);
   const timelineRef = useRef(null);
   const railRef = useRef(null);
   const markerRefs = useRef([]);
   const [progress, setProgress] = useState(0);
-  const [activeIndexes, setActiveIndexes] = useState(
-    safeJourneyTimeline.map(() => false),
-  );
+  const [activeIndexes, setActiveIndexes] = useState([]);
 
   useEffect(() => {
     const updateProgress = () => {
@@ -35,8 +34,7 @@ const Journey = () => {
 
       setProgress(nextProgress);
       setActiveIndexes(
-        safeJourneyTimeline.map((_, index) => {
-          const marker = markerRefs.current[index];
+        markerRefs.current.map((marker) => {
 
           if (!marker) {
             return false;
@@ -64,13 +62,17 @@ const Journey = () => {
     <div className={styles.page}>
       <section className={styles.timelineHeader}>
         <div className={styles.headerColumn}>
-          <span className={styles.sectionLabel}>Personal Projects</span>
-          <h3>Learning, building and exploring products.</h3>
+          <span className={styles.sectionLabel}>
+            {t('journey.header.projectsEyebrow')}
+          </span>
+          <h3>{t('journey.header.projectsTitle')}</h3>
         </div>
         <div className={styles.headerDivider} />
         <div className={styles.headerColumn}>
-          <span className={styles.sectionLabel}>Professional Work</span>
-          <h3>Operational and software experiences that shaped my path.</h3>
+          <span className={styles.sectionLabel}>
+            {t('journey.header.workEyebrow')}
+          </span>
+          <h3>{t('journey.header.workTitle')}</h3>
         </div>
       </section>
 
@@ -145,8 +147,10 @@ const Journey = () => {
 
       <section className={styles.projectsSection}>
         <div className={styles.projectsHeader}>
-          <span className={styles.sectionLabel}>Main Projects</span>
-          <h3>Projects that best represent the path behind this timeline.</h3>
+          <span className={styles.sectionLabel}>
+            {t('journey.projectsSectionEyebrow')}
+          </span>
+          <h3>{t('journey.projectsSectionTitle')}</h3>
         </div>
         <div className={styles.projectGrid}>
           {journeyFeaturedProjects.map((project) => (
@@ -170,7 +174,9 @@ const Journey = () => {
                 ))}
               </div>
               {project.isPrivate ? (
-                <span className={styles.privateNote}>Private case study</span>
+                <span className={styles.privateNote}>
+                  {t('common.privateCaseStudy')}
+                </span>
               ) : (
                 <a
                   href={project.repository}
@@ -178,7 +184,7 @@ const Journey = () => {
                   rel="noopener noreferrer"
                   className={styles.projectLink}
                 >
-                  Open repository
+                  {t('common.openRepository')}
                 </a>
               )}
             </article>

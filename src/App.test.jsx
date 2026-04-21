@@ -1,4 +1,5 @@
 import { render, screen } from '@testing-library/react';
+import './i18n';
 import Button from './components/ui/Button';
 
 test('renders a link button when href is provided', () => {
