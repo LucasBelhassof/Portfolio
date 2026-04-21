@@ -1,6 +1,7 @@
 .section1 {
   display: flex;
   align-items: flex-end;
+  gap: 1rem;
 }
 
 .textContainer {
@@ -18,6 +19,7 @@
 .foto2 {
   border-radius: 100%;
   width: 8%;
+  min-width: 44px;
 }
 
 .section2 {
@@ -73,9 +75,15 @@
 @media (max-width: 768px) {
   .section1 {
     flex-wrap: wrap;
+    align-items: flex-start;
   }
   .foto1 {
     width: 80%;
+    margin-left: 0;
+  }
+
+  .foto2 {
+    width: 56px;
   }
 }
 
@@ -87,5 +95,27 @@
   .projectHeader {
     flex-direction: column;
     gap: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section1 {
+    gap: 0.75rem;
+  }
+
+  .foto1 {
+    width: 100%;
+  }
+
+  .projectCard {
+    min-height: unset;
+  }
+
+  .projectTitle {
+    font-size: 1.15rem;
+  }
+
+  .projectBadge {
+    white-space: normal;
   }
 }

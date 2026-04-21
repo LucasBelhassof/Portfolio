@@ -27,6 +27,7 @@ body {
   margin: 0;
   background-color: var(--bg);
   color: var(--text);
+  overflow-x: hidden;
   transition:
     background-color 200ms ease,
     color 200ms ease;
