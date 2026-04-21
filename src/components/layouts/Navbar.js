@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { GoMoon } from 'react-icons/go';
-import { MdTranslate } from 'react-icons/md';
-import { MdOutlineWbSunny } from 'react-icons/md';
+import { MdOutlineWbSunny, MdTranslate } from 'react-icons/md';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
 import Container from '../Container';
@@ -51,48 +50,51 @@ const Navbar = () => {
           <h1>Lucas Belhassof Leao</h1>
         </Link>
         <div className={styles.controls}>
-          <div className={styles.navLinks}>
-            {navItems.map((item) => {
-              const isActive = location.pathname === item.to;
+          <div className={styles.navGroup}>
+            <div className={styles.navLinks}>
+              {navItems.map((item) => {
+                const isActive = location.pathname === item.to;
 
-              return (
-                <Link
-                  key={item.to}
-                  to={item.to}
-                  className={`${styles.link} ${isActive ? styles.activeLink : ''}`}
-                >
-                  {item.label}
-                </Link>
-              );
-            })}
+                return (
+                  <Link
+                    key={item.to}
+                    to={item.to}
+                    className={`${styles.link} ${isActive ? styles.activeLink : ''}`}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
+            </div>
+            <Button
+              type="button"
+              onClick={toggleLanguage}
+              aria-label={t('navbar.switchLanguage', {
+                language: t(
+                  `navbar.languages.${activeLanguage === 'pt' ? 'enLabel' : 'ptLabel'}`,
+                ),
+              })}
+              title={`${t(`navbar.languages.${activeLanguage}`)} | ${t(
+                'navbar.languageToggleLabel',
+              )}`}
+              className={styles.languageToggle}
+              variant="navButton"
+              size="sm"
+            >
+              <MdTranslate />
+            </Button>
+            <Button
+              type="button"
+              onClick={toggleTheme}
+              aria-label={t('navbar.themeToggleLabel')}
+              className={styles.themeToggle}
+              variant="navButton"
+              size="sm"
+            >
+              {theme === 'light' ? <GoMoon /> : <MdOutlineWbSunny />}
+            </Button>
           </div>
           {!isHomeRoute ? <Linkicon /> : null}
-          <Button
-            type="button"
-            onClick={toggleLanguage}
-            aria-label={t('navbar.switchLanguage', {
-              language: t(
-                `navbar.languages.${activeLanguage === 'pt' ? 'enLabel' : 'ptLabel'}`,
-              ),
-            })}
-            title={`${t('navbar.languages.' + activeLanguage)} · ${t(
-              'navbar.languageToggleLabel',
-            )}`}
-            className={styles.languageToggle}
-            variant="navButton"
-            size="sm"
-          >
-            <MdTranslate />
-          </Button>
-          <Button
-            onClick={toggleTheme}
-            aria-label={t('navbar.themeToggleLabel')}
-            className={styles.themeToggle}
-            variant="navButton"
-            size="sm"
-          >
-            {theme === 'light' ? <GoMoon /> : <MdOutlineWbSunny />}
-          </Button>
         </div>
       </nav>
     </Container>
