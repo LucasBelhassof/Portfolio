@@ -35,7 +35,7 @@ const Linkicon = () => {
         </li>
         <li className="px-2">
           <a
-            href="https://www.linkedin.com/in/lucas-belhassof-leao"
+            href="https://www.linkedin.com/in/lucasbelhassof/"
             target="_blank"
             rel="noopener noreferrer"
             style={{ color: 'var(--text)' }}
