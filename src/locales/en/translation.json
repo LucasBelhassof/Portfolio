@@ -5,7 +5,8 @@
     "openRepository": "Open repository",
     "privateRepository": "Private Repository",
     "privateCaseStudy": "Private case study",
-    "code": "//Code"
+    "code": "//Code",
+    "landingpage": "//Landing page"
   },
   "navbar": {
     "links": {

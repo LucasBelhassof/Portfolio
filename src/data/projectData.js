@@ -9,8 +9,9 @@ const projectMeta = [
   },
   {
     id: 'nexa-cliente',
-    name: 'NexaSystem Cliente',
+    name: 'NexaSystem Client',
     repository: 'https://github.com/LucasBelhassof/nexaSystem_Cliente',
+    landingPage: 'https://www.nexasystem.com.br',
     stack: [
       'Laravel',
       'Vue 3',

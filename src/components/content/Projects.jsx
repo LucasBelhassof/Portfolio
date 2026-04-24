@@ -18,24 +18,40 @@ const Projects = () => {
             <h3 className="m-0 text-dark" style={{ fontSize: '24px' }}>
               {project.name}{' '}
               <span style={{ fontSize: '18px' }}>{project.subtitle}</span>{' '}
-              {project.isPrivate ? (
-                <span
-                  className="border border-gray-300 rounded-pill px-2 small"
-                  style={{ fontSize: '13px' }}
-                >
-                  {t('common.privateRepository')}
-                </span>
-              ) : (
-                <a
-                  className="text-reset text-decoration-none"
-                  href={project.repository}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ fontSize: '18px' }}
-                >
-                  {t('common.code')}
-                </a>
-              )}
+              <span
+                className="d-inline-flex flex-wrap align-items-center gap-2"
+                style={{ marginLeft: '0.35rem', verticalAlign: 'middle' }}
+              >
+                {project.isPrivate ? (
+                  <span
+                    className="border border-gray-300 rounded-pill px-2 small"
+                    style={{ fontSize: '13px' }}
+                  >
+                    {t('common.privateRepository')}
+                  </span>
+                ) : (
+                  <a
+                    className="text-reset text-decoration-none"
+                    href={project.repository}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ fontSize: '18px' }}
+                  >
+                    {t('common.code')}
+                  </a>
+                )}
+                {project.landingPage ? (
+                  <a
+                    className="text-reset text-decoration-none"
+                    href={project.landingPage}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ fontSize: '18px' }}
+                  >
+                    {t('common.landingpage')}
+                  </a>
+                ) : null}
+              </span>
             </h3>
             <div className="d-flex flex-wrap gap-2">
               {project.stack.map((item) => (

@@ -45,17 +45,36 @@ const Home = () => {
               key={project.name}
               className={`container my-2 p-4 bg-light rounded shadow ${styles.projectCard}`}
             >
-              <Link className={styles.projectLink} to="/experience">
+              <div className={styles.projectCardBody}>
                 <div className={styles.projectHeader}>
-                  <h3 className={`m-0 text-dark ${styles.projectTitle}`}>
-                    {project.name}
-                  </h3>
+                  <div className={styles.projectTitleGroup}>
+                    <Link className={styles.projectTitleLink} to="/experience">
+                      <h3 className={`m-0 text-dark ${styles.projectTitle}`}>
+                        {project.name}
+                      </h3>
+                    </Link>
+
+                    {project.landingPage ? (
+                      <a
+                        className={styles.projectActionLink}
+                        href={project.landingPage}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {t('common.landingpage')}
+                      </a>
+                    ) : null}
+                  </div>
+
                   <span className={styles.projectBadge}>{project.label}</span>
                 </div>
-                <p className={`mb-0 text-dark ${styles.projectDescription}`}>
-                  {project.description}
-                </p>
-              </Link>
+
+                <Link className={styles.projectLink} to="/experience">
+                  <p className={`mb-0 text-dark ${styles.projectDescription}`}>
+                    {project.description}
+                  </p>
+                </Link>
+              </div>
             </div>
           ))}
         </section>
