@@ -24,7 +24,7 @@ const Linkicon = () => {
         </li>
         <li className="px-2">
           <a
-            href="https://github.com/LucasBelhassof?tab=repositories"
+            href="https://github.com/LucasBelhassof"
             target="_blank"
             rel="noopener noreferrer"
             style={{ color: 'var(--text)' }}
