@@ -152,7 +152,7 @@
         "subtitle": "Full-stack finance platform",
         "label": "Featured",
         "description": "Full-stack finance platform with dashboard, insights, chat, API endpoints and Postgres persistence.",
-        "date": "2026",
+        "date": "2026 - Project started, still ongoing",
         "highlights": [
           "Financial platform with dashboard, insights, chat and data persistence.",
           "Built with a dedicated backend, REST API endpoints and SQL migrations.",
@@ -163,7 +163,7 @@
         "subtitle": "Client-facing business platform",
         "label": "Private company project",
         "description": "Client-facing business system built with Laravel, Vue 3, Inertia and a modern operational stack.",
-        "date": "2026",
+        "date": "2025 - Project started, still ongoing",
         "highlights": [
           "Client-oriented system built on Laravel and Vue 3 with a modern web stack.",
           "Includes business features such as real-time communication and payment integrations.",
@@ -174,7 +174,7 @@
         "subtitle": "Administrative core platform",
         "label": "Private company project",
         "description": "Administrative core platform designed to support structured operations in the NexaSystem ecosystem.",
-        "date": "2026",
+        "date": "2025 - Project started, still ongoing",
         "highlights": [
           "Administrative system that complements the NexaSystem ecosystem.",
           "Built with Laravel 12, Vue 3 and Inertia to support a structured operations flow.",
@@ -185,7 +185,7 @@
         "subtitle": "Project Manager",
         "label": "Project manager",
         "description": "Project and budget management application focused on categories, services and CRUD flows.",
-        "date": "March 1, 2025",
+        "date": "2025",
         "highlights": [
           "Project manager focused on budgets, categories and service control.",
           "Includes CRUD flows to create projects and manage services within budget.",
@@ -196,7 +196,7 @@
         "subtitle": "Flutter product interface recreation",
         "label": "UI clone",
         "description": "Clone inspired by a marketplace-focused product, recreated in Flutter to demonstrate product execution and interface fidelity.",
-        "date": "September 25, 2023",
+        "date": "2023",
         "highlights": [
           "Clone inspired by the Real Trends product and interface.",
           "Focused on reproducing key flows and the overall visual structure of the platform.",
@@ -214,6 +214,20 @@
     },
     "projectsSectionEyebrow": "Main Projects",
     "projectsSectionTitle": "Projects that best represent the path behind this timeline.",
+    "projectCard": {
+      "startedAtLabel": "Started:",
+      "inDevelopment": "In development",
+      "nexaEcosystem": {
+        "title": "NexaSystem Ecosystem",
+        "subtitle": "Private products integrated across operations and client experience",
+        "body": "NexaSystem is evolving as a product ecosystem with a client-facing platform and a central administrative layer, built as complementary parts of the same company product environment.",
+        "highlights": [
+          "Brings together the client platform and the administrative core within the same product context.",
+          "Built with Laravel, Vue 3, Inertia and a modern stack designed for continuous evolution.",
+          "Still in development with focus on operations, user experience and business scale."
+        ]
+      }
+    },
     "timeline": {
       "vipnote": {
         "period": "2022",
@@ -273,7 +287,7 @@
       "today": {
         "period": "Now",
         "title": "Current focus",
-        "subtitle": "Advancing my career while building stronger digital products",
+        "subtitle": "Build my career and continue developing my own initiatives that create real impact in people’s lives.",
         "body": "Right now, I am working toward my next opportunity in software development while continuing to turn independent ideas into polished fullstack products with real user value.",
         "highlights": [
           "Pushing Finly forward as a SaaS product with practical features and clearer product direction.",

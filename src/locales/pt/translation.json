@@ -152,7 +152,7 @@
         "subtitle": "Plataforma financeira full stack",
         "label": "Destaque",
         "description": "Plataforma financeira full stack com dashboard, insights, chat, endpoints de API e persistência em Postgres.",
-        "date": "2026",
+        "date": "2026 - Início do projeto, ainda em andamento",
         "highlights": [
           "Plataforma financeira com dashboard, insights, chat e persistência de dados.",
           "Construída com backend dedicado, endpoints REST e migrações SQL.",
@@ -163,7 +163,7 @@
         "subtitle": "Plataforma de negócio voltada ao cliente",
         "label": "Projeto privado da empresa",
         "description": "Sistema voltado ao cliente construído com Laravel, Vue 3, Inertia e uma stack operacional moderna.",
-        "date": "2026",
+        "date": "2025 - Início do projeto, ainda em andamento",
         "highlights": [
           "Sistema orientado ao cliente construído com Laravel e Vue 3 em uma stack web moderna.",
           "Inclui funcionalidades de negócio como comunicação em tempo real e integrações de pagamento.",
@@ -174,7 +174,7 @@
         "subtitle": "Plataforma administrativa central",
         "label": "Projeto privado da empresa",
         "description": "Plataforma administrativa central desenhada para apoiar operações estruturadas no ecossistema NexaSystem.",
-        "date": "2026",
+        "date": "2025 - Início do projeto, ainda em andamento",
         "highlights": [
           "Sistema administrativo que complementa o ecossistema NexaSystem.",
           "Construído com Laravel 12, Vue 3 e Inertia para sustentar um fluxo operacional estruturado.",
@@ -185,7 +185,7 @@
         "subtitle": "Gerenciador de projetos",
         "label": "Gerenciador de projetos",
         "description": "Aplicação de gestão de projetos e orçamentos focada em categorias, serviços e fluxos CRUD.",
-        "date": "1 de março de 2025",
+        "date": "2025",
         "highlights": [
           "Gerenciador de projetos focado em orçamentos, categorias e controle de serviços.",
           "Inclui fluxos CRUD para criar projetos e gerenciar serviços dentro do orçamento.",
@@ -196,7 +196,7 @@
         "subtitle": "Recriação de interface de produto em Flutter",
         "label": "Clone de UI",
         "description": "Clone inspirado em um produto voltado a marketplaces, recriado em Flutter para demonstrar execução de produto e fidelidade de interface.",
-        "date": "25 de setembro de 2023",
+        "date": "2023",
         "highlights": [
           "Clone inspirado no produto e na interface da Real Trends.",
           "Focado em reproduzir fluxos-chave e a estrutura visual geral da plataforma.",
@@ -214,6 +214,20 @@
     },
     "projectsSectionEyebrow": "Principais Projetos",
     "projectsSectionTitle": "Projetos que melhor representam o caminho por trás desta timeline.",
+    "projectCard": {
+      "startedAtLabel": "Início:",
+      "inDevelopment": "Em desenvolvimento",
+      "nexaEcosystem": {
+        "title": "Ecossistema NexaSystem",
+        "subtitle": "Produtos privados integrados entre operação e experiência do cliente",
+        "body": "O NexaSystem evolui como um ecossistema de produto com frente voltada ao cliente e uma camada administrativa central, desenvolvidos de forma complementar dentro da empresa.",
+        "highlights": [
+          "Reúne a plataforma cliente e o núcleo administrativo em um mesmo contexto de produto.",
+          "Construído com Laravel, Vue 3, Inertia e uma stack moderna voltada à evolução contínua.",
+          "Segue em desenvolvimento com foco em operação, experiência do usuário e escala do negócio."
+        ]
+      }
+    },
     "timeline": {
       "vipnote": {
         "period": "2022",
@@ -273,7 +287,7 @@
       "today": {
         "period": "Agora",
         "title": "Foco atual",
-        "subtitle": "Avançando na carreira enquanto construo produtos digitais mais sólidos",
+        "subtitle": "Construir minha carreira e continuar desenvolvendo iniciativas próprias que gerem impacto real na vida das pessoas.",
         "body": "Neste momento, estou buscando minha próxima oportunidade em desenvolvimento de software enquanto continuo transformando ideias independentes em produtos full stack mais polidos e com valor real para o usuário.",
         "highlights": [
           "Levando o Finly adiante como um SaaS com funcionalidades práticas e direção de produto mais clara.",

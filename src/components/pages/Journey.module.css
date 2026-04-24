@@ -150,6 +150,25 @@
   gap: 0.45rem;
 }
 
+.timelineProjectMetaRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.timelineProjectStatus {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  border: 1px solid var(--surface-border);
+  padding: 0.25rem 0.65rem;
+  color: var(--primary);
+  font-size: 0.76rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
 .projectsSection {
   display: grid;
   gap: 1.2rem;
@@ -200,6 +219,13 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.55rem;
+}
+
+.projectActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
 }
 
 .projectLink {
@@ -297,5 +323,13 @@
   .projectTag {
     font-size: 0.78rem;
     padding: 0.3rem 0.65rem;
+  }
+
+  .timelineProjectMetaRow {
+    flex-direction: column;
+  }
+
+  .timelineProjectStatus {
+    white-space: normal;
   }
 }

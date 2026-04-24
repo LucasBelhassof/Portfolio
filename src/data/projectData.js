@@ -4,6 +4,9 @@ const projectMeta = [
     name: 'Finly',
     repository: 'https://github.com/LucasBelhassof/finly',
     stack: ['React', 'Vite', 'TypeScript', 'Express', 'PostgreSQL'],
+    startedAt: '2026',
+    isInDevelopment: true,
+    journeyOrder: 1,
     featuredOnHome: true,
     featuredInJourney: true,
   },
@@ -20,6 +23,9 @@ const projectMeta = [
       'Tailwind CSS',
       'TypeScript',
     ],
+    startedAt: '2025',
+    isInDevelopment: true,
+    journeyOrder: 2,
     isPrivate: true,
     featuredOnHome: true,
     featuredInJourney: true,
@@ -29,6 +35,9 @@ const projectMeta = [
     name: 'NexaSystem',
     repository: 'https://github.com/LucasBelhassof/nexaSystem',
     stack: ['Laravel', 'Vue 3', 'Inertia', 'Vite', 'Tailwind CSS'],
+    startedAt: '2025',
+    isInDevelopment: true,
+    journeyOrder: 3,
     isPrivate: true,
     featuredOnHome: true,
     featuredInJourney: true,
@@ -38,6 +47,9 @@ const projectMeta = [
     name: 'Cost',
     repository: 'https://github.com/LucasBelhassof/Cost',
     stack: ['React', 'CRA', 'React Router', 'JSON Server'],
+    startedAt: '2025',
+    isInDevelopment: false,
+    journeyOrder: 4,
     featuredOnHome: true,
     featuredInJourney: true,
   },
@@ -46,6 +58,9 @@ const projectMeta = [
     name: 'RealTrends Clone',
     repository: 'https://github.com/LucasBelhassof/real-trends-clone',
     stack: ['Flutter', 'Dart'],
+    startedAt: '2023',
+    isInDevelopment: false,
+    journeyOrder: 5,
     featuredOnHome: false,
     featuredInJourney: true,
   },
@@ -63,4 +78,6 @@ export const getHomeFeaturedProjects = (t) =>
   getProjectData(t).filter((project) => project.featuredOnHome);
 
 export const getJourneyFeaturedProjects = (t) =>
-  getProjectData(t).filter((project) => project.featuredInJourney);
+  getProjectData(t)
+    .filter((project) => project.featuredInJourney)
+    .sort((projectA, projectB) => projectA.journeyOrder - projectB.journeyOrder);

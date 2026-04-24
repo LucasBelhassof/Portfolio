@@ -5,16 +5,135 @@ import { getJourneyTimeline } from '../../data/journeyData';
 import styles from './Journey.module.css';
 
 const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
+const getProjectStartYear = (value) => Number.parseInt(value, 10) || 0;
+const currentYear = new Date().getFullYear();
+
+const getProjectTimelinePeriod = (project) => {
+  const startedYear = getProjectStartYear(project.startedAt);
+
+  if (project.isInDevelopment && startedYear && startedYear < currentYear) {
+    return `${startedYear}-${currentYear}`;
+  }
+
+  return project.startedAt;
+};
 
 const Journey = () => {
   const { t } = useTranslation();
   const safeJourneyTimeline = getJourneyTimeline(t);
   const journeyFeaturedProjects = getJourneyFeaturedProjects(t);
+  const timelineItemsById = Object.fromEntries(
+    safeJourneyTimeline.map((item) => [item.id, item]),
+  );
+  const projectItemsById = Object.fromEntries(
+    journeyFeaturedProjects.map((project) => [project.id, project]),
+  );
+
+  const createProjectTimelineItem = (project) => {
+    if (!project) {
+      return null;
+    }
+
+    return {
+      id: `timeline-${project.id}`,
+      type: 'project',
+      period: getProjectTimelinePeriod(project),
+      title: project.name,
+      subtitle: project.subtitle,
+      body: project.description,
+      highlights: project.highlights,
+      isInDevelopment: project.isInDevelopment,
+    };
+  };
+
+  const nexaEcosystemProjects = ['nexa-cliente', 'nexa-system']
+    .map((projectId) => projectItemsById[projectId])
+    .filter(Boolean);
+
+  const nexaEcosystemTimelineItem =
+    nexaEcosystemProjects.length > 0
+      ? {
+          id: 'timeline-nexa-ecosystem',
+          type: 'project',
+          period: `${Math.min(
+            ...nexaEcosystemProjects.map((project) => getProjectStartYear(project.startedAt)),
+          )}-${currentYear}`,
+          title: t('journey.projectCard.nexaEcosystem.title'),
+          subtitle: t('journey.projectCard.nexaEcosystem.subtitle'),
+          body: t('journey.projectCard.nexaEcosystem.body'),
+          highlights: t('journey.projectCard.nexaEcosystem.highlights', {
+            returnObjects: true,
+          }),
+          isInDevelopment: true,
+        }
+      : null;
+
+  const timelineRows = [
+    {
+      id: 'row-2022',
+      left: null,
+      right: timelineItemsById['vipnote'] ?? null,
+    },
+    {
+      id: 'row-2023',
+      left: createProjectTimelineItem(projectItemsById['real-trends-clone']),
+      right: timelineItemsById['five'] ?? null,
+    },
+    {
+      id: 'row-2025',
+      left: createProjectTimelineItem(projectItemsById['cost']),
+      right: timelineItemsById['imovel-guide'] ?? null,
+    },
+    {
+      id: 'row-2025-2026',
+      left: nexaEcosystemTimelineItem,
+      right: timelineItemsById['aprovei'] ?? null,
+    },
+    {
+      id: 'row-2026',
+      left: createProjectTimelineItem(projectItemsById['finly']),
+      right: null,
+    },
+    {
+      id: 'row-now',
+      left: timelineItemsById['today'] ?? null,
+      right: null,
+    },
+  ].filter((row) => row.left || row.right);
   const timelineRef = useRef(null);
   const railRef = useRef(null);
   const markerRefs = useRef([]);
   const [progress, setProgress] = useState(0);
   const [activeIndexes, setActiveIndexes] = useState([]);
+
+  const renderTimelineContent = (item) => {
+    const isProject = item.type === 'project';
+
+    return (
+      <div className={styles.timelineContent}>
+        {isProject ? (
+          <div className={styles.timelineProjectMetaRow}>
+            <span className={styles.period}>{item.period}</span>
+            {item.isInDevelopment ? (
+              <span className={styles.timelineProjectStatus}>
+                {t('journey.projectCard.inDevelopment')}
+              </span>
+            ) : null}
+          </div>
+        ) : (
+          <span className={styles.period}>{item.period}</span>
+        )}
+        <h4>{item.title}</h4>
+        <p className={styles.subtitle}>{item.subtitle}</p>
+        <p className={styles.body}>{item.body}</p>
+        <ul className={styles.highlights}>
+          {item.highlights.map((highlight) => (
+            <li key={`${item.id}-${highlight}`}>{highlight}</li>
+          ))}
+        </ul>
+      </div>
+    );
+  };
 
   useEffect(() => {
     const updateProgress = () => {
@@ -86,28 +205,17 @@ const Journey = () => {
         </div>
 
         <div className={styles.timelineRows}>
-          {safeJourneyTimeline.map((item, index) => {
+          {timelineRows.map((row, index) => {
             const isActive = activeIndexes[index];
-            const isLeft = item.side === 'left';
 
             return (
               <article
-                key={item.id}
+                key={row.id}
                 className={`${styles.timelineRow} ${isActive ? styles.timelineRowActive : ''}`}
               >
                 <div className={styles.rowSide}>
-                  {isLeft ? (
-                    <div className={styles.timelineContent}>
-                      <span className={styles.period}>{item.period}</span>
-                      <h4>{item.title}</h4>
-                      <p className={styles.subtitle}>{item.subtitle}</p>
-                      <p className={styles.body}>{item.body}</p>
-                      <ul className={styles.highlights}>
-                        {item.highlights.map((highlight) => (
-                          <li key={`${item.id}-${highlight}`}>{highlight}</li>
-                        ))}
-                      </ul>
-                    </div>
+                  {row.left ? (
+                    renderTimelineContent(row.left)
                   ) : (
                     <div className={styles.emptySide} aria-hidden="true" />
                   )}
@@ -123,18 +231,8 @@ const Journey = () => {
                 </div>
 
                 <div className={styles.rowSide}>
-                  {!isLeft ? (
-                    <div className={styles.timelineContent}>
-                      <span className={styles.period}>{item.period}</span>
-                      <h4>{item.title}</h4>
-                      <p className={styles.subtitle}>{item.subtitle}</p>
-                      <p className={styles.body}>{item.body}</p>
-                      <ul className={styles.highlights}>
-                        {item.highlights.map((highlight) => (
-                          <li key={`${item.id}-${highlight}`}>{highlight}</li>
-                        ))}
-                      </ul>
-                    </div>
+                  {row.right ? (
+                    renderTimelineContent(row.right)
                   ) : (
                     <div className={styles.emptySide} aria-hidden="true" />
                   )}
@@ -173,20 +271,33 @@ const Journey = () => {
                   </span>
                 ))}
               </div>
-              {project.isPrivate ? (
-                <span className={styles.privateNote}>
-                  {t('common.privateCaseStudy')}
-                </span>
-              ) : (
-                <a
-                  href={project.repository}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.projectLink}
-                >
-                  {t('common.openRepository')}
-                </a>
-              )}
+              <div className={styles.projectActions}>
+                {project.isPrivate ? (
+                  <span className={styles.privateNote}>
+                    {t('common.privateCaseStudy')}
+                  </span>
+                ) : (
+                  <a
+                    href={project.repository}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.projectLink}
+                  >
+                    {t('common.openRepository')}
+                  </a>
+                )}
+
+                {project.landingPage ? (
+                  <a
+                    href={project.landingPage}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.projectLink}
+                  >
+                    {t('common.landingpage')}
+                  </a>
+                ) : null}
+              </div>
             </article>
           ))}
         </div>
