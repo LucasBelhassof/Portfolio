@@ -47,7 +47,7 @@ const Navbar = () => {
     <Container>
       <nav className={styles.navbar}>
         <Link to="/" className="text-decoration-none text-dark">
-          <h1>Lucas Belhassof Leao</h1>
+          <h1>Lucas Sobrinho Belhassof Leao</h1>
         </Link>
         <div className={styles.controls}>
           <div className={styles.navGroup}>

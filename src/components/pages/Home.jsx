@@ -33,7 +33,7 @@ const Home = () => {
                 src={foto2}
                 alt={t('home.educationLogoAlt')}
               />
-              <p>{t('home.studentStatus')}</p>
+              <p className='mb-0'>{t('home.studentStatus')}</p>
             </div>
           </div>
         </section>
