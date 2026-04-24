@@ -5,6 +5,10 @@
   --primary: #68509b;
   --card-bg: #f8f9fa;
   --button-bg: #f8f9fa;
+  --surface-border: rgba(17, 24, 39, 0.12);
+  --surface-border-strong: rgba(17, 24, 39, 0.18);
+  --surface-hover: rgba(17, 24, 39, 0.04);
+  --overlay-bg: rgba(11, 18, 32, 0.62);
   --selection-bg: rgba(104, 80, 155, 0.32);
   --selection-text: #111827;
 }
@@ -16,6 +20,10 @@
   --primary: #68509b;
   --card-bg: #0f1720;
   --button-bg: #0f1720;
+  --surface-border: rgba(255, 255, 255, 0.22);
+  --surface-border-strong: rgba(255, 255, 255, 0.38);
+  --surface-hover: rgba(255, 255, 255, 0.06);
+  --overlay-bg: rgba(3, 7, 18, 0.72);
   --selection-bg: rgba(104, 80, 155, 0.42);
   --selection-text: #f8fafc;
 }

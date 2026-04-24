@@ -119,6 +119,7 @@ function Footer() {
               id="footer-contact-modal-description"
               className={styles.modal_description}
             >
+              {t('footer.modalDescription')}
             </p>
 
             <div className={styles.options_grid}>

@@ -4,7 +4,7 @@
     "emailMe": "Fale comigo",
     "openRepository": "Abrir repositório",
     "privateRepository": "Repositório privado",
-    "privateCaseStudy": "Case privado",
+    "privateCaseStudy": "Projeto privado da empresa",
     "code": "//Código",
     "landingpage": "//Landing page"
   },
@@ -161,24 +161,24 @@
       },
       "nexa-cliente": {
         "subtitle": "Plataforma de negócio voltada ao cliente",
-        "label": "Case privado",
+        "label": "Projeto privado da empresa",
         "description": "Sistema voltado ao cliente construído com Laravel, Vue 3, Inertia e uma stack operacional moderna.",
         "date": "2026",
         "highlights": [
           "Sistema orientado ao cliente construído com Laravel e Vue 3 em uma stack web moderna.",
           "Inclui funcionalidades de negócio como comunicação em tempo real e integrações de pagamento.",
-          "Apresentado como case privado porque o repositório não é público."
+          "Apresentado como projeto privado da empresa, por isso o repositório não é público."
         ]
       },
       "nexa-system": {
         "subtitle": "Plataforma administrativa central",
-        "label": "Case privado",
+        "label": "Projeto privado da empresa",
         "description": "Plataforma administrativa central desenhada para apoiar operações estruturadas no ecossistema NexaSystem.",
         "date": "2026",
         "highlights": [
           "Sistema administrativo que complementa o ecossistema NexaSystem.",
           "Construído com Laravel 12, Vue 3 e Inertia para sustentar um fluxo operacional estruturado.",
-          "Apresentado como case privado porque o repositório não é público."
+          "Apresentado como projeto privado da empresa, por isso o repositório não é público."
         ]
       },
       "cost": {
