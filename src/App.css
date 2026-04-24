@@ -5,6 +5,8 @@
   --primary: #68509b;
   --card-bg: #f8f9fa;
   --button-bg: #f8f9fa;
+  --selection-bg: rgba(104, 80, 155, 0.32);
+  --selection-text: #111827;
 }
 
 [data-theme='dark'] {
@@ -14,6 +16,8 @@
   --primary: #68509b;
   --card-bg: #0f1720;
   --button-bg: #0f1720;
+  --selection-bg: rgba(104, 80, 155, 0.42);
+  --selection-text: #f8fafc;
 }
 
 html,
@@ -31,6 +35,16 @@ body {
   transition:
     background-color 200ms ease,
     color 200ms ease;
+}
+
+::selection {
+  background: var(--selection-bg);
+  color: var(--selection-text);
+}
+
+::-moz-selection {
+  background: var(--selection-bg);
+  color: var(--selection-text);
 }
 
 #root {

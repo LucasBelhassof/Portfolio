@@ -27,6 +27,31 @@
     "github": "Open GitHub profile",
     "linkedin": "Open LinkedIn profile"
   },
+  "footer": {
+    "eyebrow": "Let's talk",
+    "title": "Interested in working together?",
+    "description": "Choose the channel you prefer to send me a message and start a conversation about opportunities, projects or partnerships.",
+    "openModal": "Send a message",
+    "modalTitle": "Choose where to contact me",
+    "modalDescription": "Open the channel that fits best for you and send me a message.",
+    "close": "Close",
+    "whatsappPrefill": "Hi Lucas! I saw your portfolio and would like to talk.",
+    "options": {
+      "email": {
+        "label": "Email",
+        "description": "Open your email client and write to me directly."
+      },
+      "whatsapp": {
+        "label": "WhatsApp",
+        "description": "Start a quick conversation with me on WhatsApp.",
+        "unavailable": "Add your WhatsApp number to enable this option."
+      },
+      "instagram": {
+        "label": "Instagram",
+        "description": "Send me a direct message on Instagram."
+      }
+    }
+  },
   "home": {
     "profilePhotoAlt": "Portrait of Lucas Belhassof Leao",
     "educationLogoAlt": "Unicesumar logo",
